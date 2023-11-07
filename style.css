@@ -1,13 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #FFFBEB;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/fonts/poppins.regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(/fonts/poppins.bold.ttf);
 }
 
 nav .flexContainer{
-    background-color: #f4f4f4;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: relative;
 }
 
@@ -18,4 +28,84 @@ nav .mainPages{
 
 a:link, a:visited{
     text-decoration: none;
+}
+
+/* landing page */
+
+.catch{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-break: auto;
+}
+
+.catch h3{
+    font-family: 'Poppins';
+}
+
+.catch h1{
+    font-size: 3rem;
+    font-family: 'Poppins-Bold';
+    color: #F8CBA6;
+}
+
+.catch p{
+    padding-top: 1rem;
+    font-family: 'Poppins';
+}
+
+.profilePic{
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+
+.landingPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home {
+    padding: 2rem;
+}
+
+.resume-button {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    margin-right: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+  
+.resume-button:after {
+    content: "";
+    background-color: #F8CBA6;
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+.resume-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (max-width:768px) {
+    .profilePic{
+        display: none;
+    }
 }
