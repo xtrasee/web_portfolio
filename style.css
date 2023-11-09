@@ -1,7 +1,12 @@
+:root {
+    --beige-color:#F8CBA6;
+    --lightbeige-color:#FFE7CC;
+
+}
+
 * {
     margin: 0;
     padding: 0;
-    background-color: #FFFBEB;
 }
 
 @font-face {
@@ -17,7 +22,7 @@
 nav .flexContainer{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     position: relative;
 }
 
@@ -31,13 +36,32 @@ a:link, a:visited{
 }
 
 /* landing page */
+.home {
+    padding: 5rem;
+    position: relative;
+}
+
+.landingPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg {
+    max-height: 100vh;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 10px;
+    z-index: -1;
+}
 
 .catch{
-
     display: flex;
     flex-direction: column;
     width: 50%;
-    line-break: auto;
 }
 
 .catch h3{
@@ -47,7 +71,7 @@ a:link, a:visited{
 .catch h1{
     font-size: 3rem;
     font-family: 'Poppins-Bold';
-    color: #F8CBA6;
+    color: #b1bca6;
 }
 
 .catch p{
@@ -55,40 +79,45 @@ a:link, a:visited{
     font-family: 'Poppins';
 }
 
-.profilePic{
-    border-radius: 5px;
-    border: 1px solid black;
+.img-overlay-wrap {
+    position: relative;
+    display: inline-block;
+    transition: transform 150ms ease-in-out;
+    margin-right: 6rem;
+}
+  
+.img-overlay-wrap img {
     padding: 0.5rem;
     margin-top: 2rem;
-}
-
-.landingPage{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.home {
-    padding: 2rem;
-}
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: block;
+ }
+ 
+ .img-overlay-wrap svg {
+   position: absolute;
+   left: 0;
+   right: 5;
+   z-index: 1;
+ }
 
 .resume-button {
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    padding: 13px 20px 13px;
-    margin-right: 2rem;
-    border: 1px solid black;
-    cursor: pointer;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 5px;
+   font-size: 16px;
+   font-weight: 200;
+   letter-spacing: 1px;
+   padding: 13px 20px 13px;
+   margin-top: 1rem;
+   border: 1px solid black;
+   cursor: pointer;
+   position: relative;
+   background-color: rgba(0, 0, 0, 0);
+   border-radius: 5px;
 }
-
-  
-.resume-button:after {
+ 
+.resume-button::after {
     content: "";
-    background-color: #F8CBA6;
+    background-color: #F9F3CC;
     border-radius: 5px;
     width: 100%;
     position: absolute;
@@ -104,8 +133,28 @@ a:link, a:visited{
   left: 0px;
 }
 
+
+/* responsive design */
 @media (max-width:768px) {
-    .profilePic{
-        display: none;
+
+    .home{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .landingPage{
+        flex-direction: column;
+    }
+
+    .catch p{
+        margin-bottom: 1.5rem;
+    }
+
+    .resume-button{
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 1rem;
     }
 }
