@@ -36,6 +36,10 @@ a:link, a:visited{
 }
 
 /* landing page */
+.navbar a.hover{
+    color:black;
+}
+
 .home {
     position: relative;
     padding: 5rem;
@@ -68,7 +72,7 @@ svg {
     font-family: 'Poppins';
 }
 
-.catch h1, .about h1{
+.catch h1, .about h1, .work h1{
     font-size: 3rem;
     font-family: 'Poppins-Bold';
     color: #b1bca6;
@@ -135,18 +139,35 @@ svg {
 
 /* About section */
 
-.about {
+.about{
     padding: 5rem;
     margin-top: 15rem;
     display: flex;
     justify-content:space-between;
 }
 
+.aboutHead{
+    margin-bottom: 3rem;
+    max-width: 75%;
+}
+
 .about p {
     padding-top: 1rem;
     font-family: 'Poppins';
     font-size: 0.9rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
+}
+
+.bullet {
+    width: 75%;
+    padding-left: 15rem;
+}
+
+/* Work Section */
+.work{
+    padding: 5rem;
+    display: flex;
+    justify-content:space-between;
 }
 
 
