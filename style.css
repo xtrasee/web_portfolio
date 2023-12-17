@@ -126,6 +126,8 @@ svg {
  
  .img-overlay-wrap svg {
    position: absolute;
+   margin-top: 15%;
+   height: 80%;
    left: 0;
    right: 5;
    z-index: 1;
@@ -164,49 +166,74 @@ svg {
 
 /* About section */
 
-.aboutHead{
-    margin-bottom: 3rem;
+.home, .about, .work{
+    padding-bottom: 35%;
+}
+
+.aboutSec{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    
 }
 
 .about p {
     padding-top: 1rem;
     font-family: 'Poppins';
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.75rem;
+    margin-right: 10%;
+    word-wrap: break-word;
 }
 
 .skillSet h3{
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.25rem;
     border-bottom: 1px solid white;
+    padding-top: 10%;
 }
+
+.skillSet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .achievements{
     color: white;
     background-color:#8eadcd90;
     border-radius: 10px;
-    padding: 2rem;
-    width: 100%;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
 }
 
-.technologies{
+.technologies {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 3rem;
+    font-size: 2.75rem;
+}
+
+.technologies i{
+    padding: 0.50rem;
 }
 
 /* soft skills section */
 .softSkills{
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
-/* fun facts */
+.softSkills i {
+    padding-bottom: 0.75rem;
+}
 
+
+/* fun facts */
 .funFacts h3{
     font-size: 2rem;
     color: #b1bca6;
+    margin-top: 15%;
 }
 
 .funFacts{
@@ -223,34 +250,36 @@ svg {
 
 
 /* responsive design */
-@media (min-width:768px){
+@media (max-width: 1157px){
     .aboutSec{
-        margin-top: 15rem;
-        display: flex;
+        flex-direction: column;
     }
-
-    .aboutHead{
-        width: 50%;
-        margin-right: 2rem;
-    }
-
     .achievements{
-        color: white;
-        background-color:#8eadcd90;
-        align-items: center;
-        border-radius: 10px;
-        width: 50%;
+        width: 75%;
+        margin-left: 3.5%;
+        padding: 5px;
+    }
+
+    .skillSet h3{
+        padding-top: 5px;
     }
 }
+
+/* ipad mini size */
 @media (max-width:768px) {
 
-    .home{
-        justify-content: center;
+    .landingPage, .about{
         flex-direction: column;
     }
 
-    .landingPage{
-        flex-direction: column;
+    .img-overlay-wrap img{
+        margin-left: 25%;
+    }
+
+    .img-overlay-wrap svg{
+        margin-left: 25%;
+        margin-top: 25%;
+        height: 70%;
     }
 
     .catch p{
