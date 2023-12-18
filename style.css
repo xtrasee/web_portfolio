@@ -1,5 +1,5 @@
 :root {
-    --beige-color:#F8CBA6;
+    --green-color:#b1bca6;
     --lightbeige-color:#FFE7CC;
 
 }
@@ -9,6 +9,7 @@
     padding: 0;
 }
 
+/* page formatting */
 main{
     padding: 7rem 10.5rem;
 }
@@ -33,7 +34,29 @@ main{
     src: url();
 }
 
-nav .flexContainer{
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 40%;
+    margin-left: 30%;
+    border: 1px solid blue;
+    font-size: 1.1rem;
+    font-family: 'Poppins-Light';
+    list-style-type: none;
+}
+
+li  a{
+    color: black;
+    text-decoration: none;
+}
+
+.active{
+  border-bottom:2px solid #f00;
+}
+
+/* nav .flexContainer{
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 4rem;
@@ -58,17 +81,12 @@ a:link, a:visited{
     color: black;
 }
 
-a:hover{
+a:hover,a:active{
     color: #b1bca6;
-}
+    background-color: black;
+} */
 
 /* landing page */
-
-.home {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .landingPage{
     display: flex;
@@ -100,7 +118,7 @@ svg {
 .catch h1, .about h1, .work h1{
     font-size: 4rem;
     font-family: 'Poppins-Bold';
-    color: #b1bca6;
+    color: var(--green-color);
 }
 
 .catch p{
@@ -166,10 +184,6 @@ svg {
 
 /* About section */
 
-.home, .about, .work{
-    padding-bottom: 35%;
-}
-
 .aboutSec{
     display: flex;
     flex-direction: row;
@@ -183,7 +197,6 @@ svg {
     font-size: 1rem;
     line-height: 1.75rem;
     margin-right: 10%;
-    word-wrap: break-word;
 }
 
 .skillSet h3{
@@ -197,6 +210,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .achievements{
@@ -236,11 +250,6 @@ svg {
     margin-top: 15%;
 }
 
-.funFacts{
-    margin-bottom: 3rem;
-
-}
-
 /* Work Section */
 .work{
     display: flex;
@@ -265,11 +274,22 @@ svg {
     }
 }
 
-/* ipad mini size */
-@media (max-width:768px) {
+/* tablet size */
+@media (max-width:1023px) {
 
     .landingPage, .about{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .about p{
+        margin-right: 0%;
+        margin-bottom: 5%;
+    }
+
+    .achievements{
+        margin-left: 10%;
     }
 
     .img-overlay-wrap img{
@@ -282,15 +302,34 @@ svg {
         height: 70%;
     }
 
-    .catch p{
-        margin-bottom: 1.5rem;
-    }
-
     .resume-button{
         text-align: center;
         margin: auto;
         width: 50%;
         margin-left: 25%;
         margin-top: 1rem;
+    }
+}
+
+/* smartphone */
+@media (max-width:767px) {
+    main{
+        padding: 0;
+    }
+
+    .home{
+        margin-top: 10%;
+        justify-content: start;
+    }
+
+    .catch h1{
+        font-size: 2.35rem;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
     }
 }
