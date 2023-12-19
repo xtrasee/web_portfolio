@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracy's Portfolio</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1ded1ed97d.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
@@ -20,76 +20,67 @@ When I am not at my computer I like to play badminton, try new restaurants, and 
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">    
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a href="/index.html">TN</a></li> 
-                <li class="nav-item"><a href="/about.html">About</a></li> 
-                <li class="nav-item"><a href="/work.html">Work</a></li> 
-                <li class="nav-item"><a href="/contact.html">Contact</a></li> 
-                <div class="switchMode">
-                    <i class="fa fa-sun-o" style="color: black"></i>
-                </div>
-                    <!-- light and dark mode (moon-o)-->
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="home">
-            <div id="home">
-                <div class="landingPage">
-                    <div class="catch">
-                        <h3>Hello, I'm Tracy,</h3>
-                        <h1>Full Stack Web Developer</h1>
-            
-                        <p>A recent first generation graduate of UC San Diego with an unwavering work ethic and dedication to lifelong learning.</p>
-                        
+    <div class="page-container">
+        <header>
+            <nav class="navbar" id="navbar">    
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/index.html">Home</a></li> 
+                    <li class="nav-item"><a href="/about.html">About</a></li> 
+                    <li class="nav-item"><a href="/work.html">Work</a></li> 
+                    <li class="nav-item"><a href="/contact.html">Contact</a></li> 
+                    <div class="switchMode">
+                        <i class="fa fa-sun-o" style="color: black"></i>
                     </div>
-
-                    <div class="profilePic">
-                        <div class="img-overlay-wrap">
-                            <img src="img/grad.jpg" alt="Tracy's Profile Picture">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="493" height="493" viewBox="0 0 493 493" fill="none">
-                                <path d="M143.385 479.93L143.385 479.929C86.1603 457.468 37.9742 403.063 14.9662 333.777C-7.95257 264.576 -5.57458 180.566 36.1367 115.425C77.9457 50.1815 159.226 3.66055 244.33 0.656615C329.356 -2.3478 418.26 38.0833 460.778 103.39C503.292 168.78 499.498 259.152 470.485 326.715C441.489 394.148 387.218 438.755 326.908 465.895C266.679 492.947 200.512 502.389 143.385 479.93Z" stroke="#b1bca6"stroke-width="2"/>
-                              </svg>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- resume download button -->
-                <button class="resume-button">Resume</button>
-
-                <!-- svg background -->
-
-                <svg width="1902" height="1368" viewBox="0 0 1902 1368" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.9" filter="url(#filter0_f_1_4011)">
-                    <path d="M1170.09 740.371C1122.84 619.796 1107.93 351.657 1222.36 306.85C1336.78 262.042 1537.22 457.533 1584.46 578.108C1631.7 698.682 1577.24 832.751 1462.81 877.559C1348.39 922.366 1217.33 860.945 1170.09 740.371Z" fill="#8EACCD"/>
-                    </g>
-                    <g opacity="0.9" filter="url(#filter1_f_1_4011)">
-                    <path d="M345.668 925.875C306.723 826.479 272.46 614.039 334.623 589.697C396.786 565.355 531.834 738.328 570.78 837.724C609.725 937.121 590.903 1037.43 528.74 1061.77C466.578 1086.12 384.613 1025.27 345.668 925.875Z" fill="#8EACCD"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_f_1_4011" x="834.766" y="0.301025" width="1066.72" height="1191.91" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_4011"/>
-                    </filter>
-                    <filter id="filter1_f_1_4011" x="0.439209" y="287.377" width="890.623" height="1079.76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_4011"/>
-                    </filter>
-                    </defs>
-                    </svg>
-                    
-            </div>
-        </section>
-    </main>
-
-
+                        <!-- light and dark mode (moon-o)-->
+                </ul>
+            </nav>
+        </header>
     
+        <main>
+            <section class="home">
+                <div id="home">
+                    <div class="landingPage">
+                        <div class="catch">
+                            <h1>Hello, I'm Tracy.</h1>
+                            <h1>Full Stack Web Developer</h1>
+                
+                            <p>A recent first generation graduate of UC San Diego with an unwavering work ethic and dedication to lifelong learning.</p>
+                            <div class="star-container">
+                                <div class="star-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="151" height="148" viewBox="0 0 151 148" fill="none">
+                                        <path d="M75.9817 0L77.25 34.2209C78.0259 55.1571 94.8249 71.9475 115.762 72.7127L150.982 74L115.762 75.2873C94.8249 76.0525 78.0259 92.8429 77.25 113.779L75.9817 148L74.7134 113.779C73.9375 92.8429 57.1385 76.0525 36.2019 75.2873L0.981689 74L36.2018 72.7127C57.1384 71.9475 73.9375 55.1571 74.7134 34.2209L75.9817 0Z" fill="white">
+                                      </svg>
+                                </div>
+
+                                <div class="star-svg-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="111" height="140" viewBox="0 0 111 140" fill="none">
+                                        <path d="M55.8375 0L58.4266 20.7117C61.5041 45.3298 80.4128 64.9886 104.893 69.0208L110.838 70L104.893 70.9792C80.4128 75.0114 61.5041 94.6702 58.4266 119.288L55.8375 140L53.2484 119.288C50.171 94.6702 31.2622 75.0114 6.78235 70.9792L0.837524 70L6.78235 69.0208C31.2622 64.9886 50.171 45.3298 53.2484 20.7117L55.8375 0Z" fill=#e0e4db>
+                                      </svg>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- <div class="profilePic">
+                            <div class="img-overlay-wrap">
+                                <img src="img/grad.jpg" alt="Tracy's Profile Picture">
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="493" height="493" viewBox="0 0 493 493" fill="none">
+                                    <path d="M143.385 479.93L143.385 479.929C86.1603 457.468 37.9742 403.063 14.9662 333.777C-7.95257 264.576 -5.57458 180.566 36.1367 115.425C77.9457 50.1815 159.226 3.66055 244.33 0.656615C329.356 -2.3478 418.26 38.0833 460.778 103.39C503.292 168.78 499.498 259.152 470.485 326.715C441.489 394.148 387.218 438.755 326.908 465.895C266.679 492.947 200.512 502.389 143.385 479.93Z" stroke="#b1bca6"stroke-width="2"/>
+                                  </svg>
+                            </div>
+                        </div> -->
+    
+                    </div>
+                    <!-- resume download button -->
+                    <div class="resume-container">
+                        <button class="resume-button">Resume</button>
+                    </div>
+                        
+                </div>
+
+            </section>
+        </main>
+        
+    </div>
 </body>
 </html>

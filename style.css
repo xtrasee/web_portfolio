@@ -1,18 +1,30 @@
 :root {
     --green-color:#b1bca6;
+    /* --green-color: #58684c; */
     --lightbeige-color:#FFE7CC;
-
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* page formatting */
-main{
-    padding: 7rem 10.5rem;
+body{
+    margin: 0; /* Reset default margin */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: linear-gradient(45deg, #ECF9FF, #FFFBEB, #FFE7CC);
+    background-repeat: no-repeat; 
 }
+
+.page-container{
+    min-height: 100vh;
+    padding: 7rem 10.5rem;
+    position: relative;
+}
+
+
 
 @font-face {
     font-family: 'Poppins';
@@ -20,8 +32,12 @@ main{
 }
 
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url(/fonts/poppins.bold.ttf);
+    /* font-family: 'Bohay';
+    src: url(/fonts/bohay.otf); */
+    font-family: 'Synthemesc';
+    src: url(/fonts/Synthemesc.ttf);
+    font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
@@ -29,72 +45,56 @@ main{
     src: url(/fonts/Poppins-Light.ttf);
 }
 
-@font-face {
-    font-family: 'Poppins-Semibold';
-    src: url();
-}
-
-
-ul {
+.navbar ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
     width: 40%;
+    margin-top: 5%;
     margin-left: 30%;
-    border: 1px solid blue;
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
     list-style-type: none;
+    margin-bottom: 15%;
 }
 
-li  a{
+.navbar li  a{
+    display: inline;
     color: black;
     text-decoration: none;
+    padding: 0.25rem 1rem;
+}
+
+.nav-link {
+    display: inline-block;
 }
 
 .active{
-  border-bottom:2px solid #f00;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
-/* nav .flexContainer{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 4rem;
-    position: relative;
-    font-size: 1.1rem;
-    font-family: 'Poppins-Light';
-    color: #f4f4f4;
+/* upon scroll, transparent nav bar when scrolling down */
+.transparent {
+    background-color: transparent;
+    color: #fff;
 }
 
-nav .mainNav{
-    display: flex;
-    gap: 1rem;
-}
-
-.logo a{
-    font-size: 1.5rem;
-    font-family: 'Poppins-Semibold';
-}
-
-a:link, a:visited{
-    text-decoration: none;
-    color: black;
-}
-
-a:hover,a:active{
-    color: #b1bca6;
-    background-color: black;
-} */
-
-/* landing page */
+/* LANDING PAGE */
 
 .landingPage{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
-svg {
+.landingPage svg{
+    width: 150.073px;
+    height: 148.074px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.profilePic svg {
     max-height: 100vh;
     max-width: 100vw;
     height: 100%;
@@ -105,28 +105,57 @@ svg {
     z-index: -1;
 }
 
+.star-container{
+    position: absolute;
+    width: 100%;
+}
+
+.star-svg{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+.star-svg-2{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 32%;
+    padding: 7% 10%;
+}
+
 .catch{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 50%;
 }
 
-.catch h3{
-    font-family: 'Poppins';
+.catch h1{
+    text-align: center;
+    font-family: 'Synthemesc';
+    color: var(--green-color);
+    width: 100vh;
+    font-size: 9vw;
 }
 
-.catch h1, .about h1, .work h1{
+.about h1, .work h1{
     font-size: 4rem;
-    font-family: 'Poppins-Bold';
+    font-family: 'Synthemesc';
     color: var(--green-color);
 }
 
 .catch p{
-    padding-top: 1rem;
+    text-align: center;
+    padding-top: 4rem;
     font-family: 'Poppins';
+    color: #878787;
+    font-size: 1.5rem;
 }
 
-.img-overlay-wrap {
+/* .img-overlay-wrap {
     position: relative;
     display: inline-block;
     transition: transform 150ms ease-in-out;
@@ -149,10 +178,17 @@ svg {
    left: 0;
    right: 5;
    z-index: 1;
+ } */
+
+ .resume-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
  }
 
 .resume-button {
-   font-size: 16px;
+   font-size: 26px;
+   font-family:'Poppins';
    font-weight: 200;
    letter-spacing: 1px;
    padding: 13px 20px 13px;
@@ -166,7 +202,7 @@ svg {
  
 .resume-button::after {
     content: "";
-    background-color: #F9F3CC;
+    background-color: #f4e0a5;
     border-radius: 5px;
     width: 100%;
     position: absolute;
@@ -260,6 +296,11 @@ svg {
 
 /* responsive design */
 @media (max-width: 1157px){
+    .catch h1{
+        width: 60vh;
+        font-size: 7vw;
+    }
+
     .aboutSec{
         flex-direction: column;
     }
@@ -292,7 +333,7 @@ svg {
         margin-left: 10%;
     }
 
-    .img-overlay-wrap img{
+    /* .img-overlay-wrap img{
         margin-left: 25%;
     }
 
@@ -300,30 +341,14 @@ svg {
         margin-left: 25%;
         margin-top: 25%;
         height: 70%;
-    }
-
-    .resume-button{
-        text-align: center;
-        margin: auto;
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 1rem;
-    }
+    } */
 }
 
 /* smartphone */
 @media (max-width:767px) {
-    main{
-        padding: 0;
-    }
-
-    .home{
-        margin-top: 10%;
-        justify-content: start;
-    }
-
     .catch h1{
-        font-size: 2.35rem;
+        width: 40vh;
+        font-size: 6vw;
     }
 
     .about{
