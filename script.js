@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  let prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 
   window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
@@ -49,4 +49,26 @@ document.addEventListener('DOMContentLoaded', function () {
   
     prevScrollpos = currentScrollPos;
   };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var contents = document.getElementById('contents');
+
+    // Function to check if the user has scrolled up
+    function checkScroll() {
+      var scrollPosition = window.scrollY;
+
+      // Adjust the value (e.g., 300) based on when you want the content to appear
+      if (scrollPosition > 550) {
+        contents.style.opacity = 1;
+      } else {
+        contents.style.opacity = 0;
+      }
+    }
+
+    // Attach the checkScroll function to the scroll event
+    window.addEventListener('scroll', checkScroll);
+
+    // Initial check to see if content should be visible on page load
+    checkScroll();
+  });
   
