@@ -251,9 +251,11 @@ body, .catch p, .resume-button, .about p {
     margin-top: 2rem;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.9s;
-    background-color: #FEF7DC;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e5dec6, #ffffeb);
+    box-shadow:  12px 12px 24px #e7e1c8,
+                 -12px -12px 24px #fffff0;
     padding: 1rem;
-    border-radius: 15px;
  }
 
  .vertical-line{
@@ -275,7 +277,7 @@ body, .catch p, .resume-button, .about p {
     margin-top: 10%;
  }
 
- .tech-skills h2{
+ .skills h2{
     text-align: center;
     margin-bottom: 2rem;
     color: #A19882;
@@ -285,9 +287,10 @@ body, .catch p, .resume-button, .about p {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 5%;
  }
  
- .technologies h5{
+ .technologies h5, .skill-box{
     text-align: center;
     color: #A19882;
  }
@@ -301,21 +304,6 @@ body, .catch p, .resume-button, .about p {
     color: #A19882;
  }
 
- .soft-skills h3{
-    color: #FEF7DC;
-    font-size: 2rem;
-    font-family: 'Poppins-bold';
-    margin-bottom: 2rem;
- }
-
- .soft-skills{
-    text-align: center;
-    margin-top: 10%;
-    background-color: #A19882;
-    border-radius: 15px;
-    padding: 3rem 0rem;
- }
-
  .skill-box{
     display: flex;
     flex-direction: row;
@@ -323,11 +311,9 @@ body, .catch p, .resume-button, .about p {
  }
 
  .quality-card{
-    display: flex;
-    justify-content: space-between;
     padding: 1rem;
     font-size: 1.25rem;
-    color: #FEF7DC;
+    color: #A19882;
  }
 
  /* short intro */

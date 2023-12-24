@@ -58,7 +58,7 @@ let prevScrollpos = window.pageYOffset;
       var scrollPosition = window.scrollY;
 
       // Adjust the value (e.g., 300) based on when you want the content to appear
-      if (scrollPosition > 550) {
+      if (scrollPosition > 650) {
         contents.style.opacity = 1;
       } else {
         contents.style.opacity = 0;
