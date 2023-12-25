@@ -1,5 +1,5 @@
 :root {
-    --green-color:#878f7f;
+    --green-color:#2647089d;
     --lightgrey-color:#878787;
     --blue-color: #8eadcd90;
     --yellow-color: #f4e0a5;
@@ -15,9 +15,6 @@
 body{
     margin: 0; /* Reset default margin */
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    background: linear-gradient(45deg, #ECF9FF, #FFFBEB, #FFE7CC);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .page-container{
@@ -91,17 +88,6 @@ body{
     display: flex;
     justify-content: center;
 }
-
-/* .profilePic svg {
-    max-height: 100vh;
-    max-width: 100vw;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0rem;
-    left: 10px;
-    z-index: -1;
-} */
 
 .star-container{
     position: absolute;
@@ -218,6 +204,8 @@ body, .catch p, .resume-button, .about p {
     height: 23vw;
     border-top-right-radius: 40%;
     border-top-left-radius: 40%;
+    box-shadow:  -5px 5px 0px #bebebe68,
+             5px -5px 0px #ffffff8f;
     overflow: hidden;
 }
 
@@ -248,18 +236,18 @@ body, .catch p, .resume-button, .about p {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin: 7rem 0rem;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.9s;
     border-radius: 20px;
-    background: linear-gradient(145deg, #e5dec6, #ffffeb);
+    background: linear-gradient(145deg, #e5dec63b, #ffffeb);
     box-shadow:  12px 12px 24px #e7e1c8,
                  -12px -12px 24px #fffff0;
     padding: 1rem;
  }
 
- .vertical-line{
-    border-left: 2px solid var(--lightgrey-color); /* Adjust thickness and color as needed */
+ /* .vertical-line{
+    border-left: 2px solid var(--lightgrey-color);
     height: 15rem;
     margin-top: 1rem;
  }
@@ -275,7 +263,7 @@ body, .catch p, .resume-button, .about p {
     align-items: center;
     color: var(--lightgrey-color);
     margin-top: 10%;
- }
+ } */
 
  .skills h2{
     text-align: center;
@@ -317,13 +305,32 @@ body, .catch p, .resume-button, .about p {
  }
 
  /* short intro */
- 
+ .short-intro{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    padding: 1rem;
+    font-size: 1.2rem;
+ }
+
+ .intro-bio{
+    width: 50%;
+    color: var(--lightgrey-color);
+}
 
 /* fun facts */
-.funFacts h3{
+.fun-facts h3{
     font-size: 2rem;
     color: var(--green-color);
-    margin-top: 3rem;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.fun-facts {
+    color: var(--lightgrey-color);
 }
 
 /* Work Section */
@@ -370,16 +377,6 @@ body, .catch p, .resume-button, .about p {
     .achievements{
         margin-left: 10%;
     }
-
-    /* .img-overlay-wrap img{
-        margin-left: 25%;
-    }
-
-    .img-overlay-wrap svg{
-        margin-left: 25%;
-        margin-top: 25%;
-        height: 70%;
-    } */
 }
 
 /* smartphone */
