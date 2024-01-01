@@ -1,8 +1,7 @@
 :root {
-    --green-color:#2647089d;
-    --lightgrey-color:#878787;
-    --blue-color: #8eadcd90;
-    --yellow-color: #f4e0a5;
+    --darkblue-color: #102C57;
+    --grey-color:#565656;
+    --pink-color: #ffc4b2;
 }
 
 * {
@@ -12,14 +11,19 @@
 }
 
 /* page formatting */
-body{
-    margin: 0; /* Reset default margin */
+html, body{
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
+    background-repeat: no-repeat;
+}
+
+.last-element {
+    margin-bottom: 0;
 }
 
 .page-container{
     min-height: 100vh;
-    padding: 1rem 7rem 10.5rem;
+    /* padding: 1rem 7rem 10.5rem; */
     position: relative;
 }
 
@@ -41,7 +45,7 @@ body{
 
 @font-face {
     font-family: 'Synthemesc';
-    src: url(/fonts/Synthemesc.ttf);
+    src: url(/fonts/Acorn-Bold.ttf);
     font-style: normal;
     font-weight: 400;
 }
@@ -73,7 +77,7 @@ body{
 
 .active{
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.766);
 }
 
 /* upon scroll, transparent nav bar when scrolling down */
@@ -119,7 +123,7 @@ body, .catch p, .resume-button, .about p {
 
 .catch h1, .work h1, .about h1{
     font-family: 'Synthemesc';
-    color: var(--green-color);
+    color: var(--darkblue-color);
 }
 
 .catch{
@@ -143,7 +147,7 @@ body, .catch p, .resume-button, .about p {
 .catch p{
     text-align: center;
     padding-top: 4rem;
-    color: var(--lightgrey-color);
+    color: var(--grey-color);
     font-size: 1.5rem;
 }
  
@@ -159,16 +163,17 @@ body, .catch p, .resume-button, .about p {
    letter-spacing: 1px;
    padding: 13px 20px 13px;
    margin-top: 1rem;
-   border: 1px solid var(--lightgrey-color);
+   border: 1px solid var(--grey-color);
    cursor: pointer;
    position: relative;
    background-color: rgba(0, 0, 0, 0);
    border-radius: 5px;
+   z-index: 0;
 }
  
 .resume-button::after {
     content: "";
-    background-color: #f4e0a5;
+    background-color: #ffbc9bc5;
     border-radius: 5px;
     width: 100%;
     position: absolute;
@@ -204,17 +209,17 @@ body, .catch p, .resume-button, .about p {
     height: 23vw;
     border-top-right-radius: 40%;
     border-top-left-radius: 40%;
-    box-shadow:  -5px 5px 0px #bebebe68,
-             5px -5px 0px #ffffff8f;
+    box-shadow:  -5px 5px 0px #FFD8CC,
+             5px -5px 0px #F5F5DC;
     overflow: hidden;
 }
 
  .about h2{
     margin-top: 2rem;
-    font-size: 2rem;
-    color: var(--green-color);
+    font-size: 2.5rem;
+    color: var(--darkblue-color);
     /* find better font to pair with h1 font */
-    font-family: 'Poppins-bold';
+    font-family: 'Synthemesc';
  }
 
  .about-head{
@@ -226,49 +231,33 @@ body, .catch p, .resume-button, .about p {
 
  .about p, .about-head p {
     padding-top: 2rem;
-    font-size: 1.15rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
     margin-right: 10%;
-    color: var(--lightgrey-color);
+    color: var(--grey-color);
 }
 
+/* MAKE FOR SMALLER SCREENS TO HAVE NO BORDER SPACE */
  .about-tools{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 7rem 0rem;
+    padding: 0;
+    margin: 7rem 5rem;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.9s;
     border-radius: 20px;
-    background: linear-gradient(145deg, #e5dec63b, #ffffeb);
-    box-shadow:  12px 12px 24px #e7e1c8,
-                 -12px -12px 24px #fffff0;
-    padding: 1rem;
+    background: #102c57e2;
+    padding: 0.75rem;
  }
-
- /* .vertical-line{
-    border-left: 2px solid var(--lightgrey-color);
-    height: 15rem;
-    margin-top: 1rem;
- }
-
-.scroll h3{
-    font-size: 1.5rem;
-    color: var(--green-color);
-}
-
- .scroll{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--lightgrey-color);
-    margin-top: 10%;
- } */
 
  .skills h2{
     text-align: center;
     margin-bottom: 2rem;
-    color: #A19882;
+    color: var(--pink-color);
+    font-family: 'Synthemesc';
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
  }
 
  .technologies{
@@ -280,16 +269,19 @@ body, .catch p, .resume-button, .about p {
  
  .technologies h5, .skill-box{
     text-align: center;
-    color: #A19882;
+    color: #FFEEDB;
+    font-size: 1.5rem;
+    padding: 0rem 1.5rem;
  }
 
  .technologies i{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     font-size: 5rem;
     padding: 1rem;
-    color: #A19882;
+    color: #FFEEDB;
  }
 
  .skill-box{
@@ -298,10 +290,14 @@ body, .catch p, .resume-button, .about p {
     justify-content: center;
  }
 
+ .soft-skills{
+    margin-top: 7.5rem;
+ }
+
  .quality-card{
-    padding: 1rem;
-    font-size: 1.25rem;
-    color: #A19882;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: #FFEEDB;
  }
 
  /* short intro */
@@ -313,24 +309,70 @@ body, .catch p, .resume-button, .about p {
     align-items: center;
     font-family: 'Poppins';
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 2.25rem;
  }
 
  .intro-bio{
     width: 50%;
-    color: var(--lightgrey-color);
+    color: var(--grey-color);
 }
 
 /* fun facts */
-.fun-facts h3{
-    font-size: 2rem;
-    color: var(--green-color);
-    text-align: center;
-    margin-top: 6rem;
+.fun-facts ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+
+.fun-facts li{
+    width: fit-content;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    border-radius: 20px;
+    background-color: var(--darkblue-color);
+}
+
+.fun1{
+    width: 100%;
+    justify-content: start;
+}
+
+.fun2{
+    width: 100%;
+    padding-left: 9%;
+}
+.fun3{
+    width: 100%;
+    padding-left: 18%;
+}
+.fun4{
+    width: 100%;
+    padding-left: 27%;
+}
+.fun5{
+    width: 100%;
+    padding-left: 36%;
 }
 
 .fun-facts {
-    color: var(--lightgrey-color);
+    margin-top: 6rem;
+    padding: 2.5rem;
+    /* margin: 7rem 5rem;
+    border-radius: 20px; */
+    color: #FFEEDB;
+    background-color: var(--pink-color);
+
+}
+
+.fun-facts h3{
+    font-family: 'Synthemesc';
+    font-size: 3.75rem;
+    letter-spacing: 0.25rem;
+    color: var(--darkblue-color);
+    text-align: center;
 }
 
 /* Work Section */
