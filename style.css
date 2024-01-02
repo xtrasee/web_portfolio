@@ -39,8 +39,8 @@ html, body{
 }
 
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url(/fonts/poppins.bold.ttf);
+    font-family: 'Baskervville';
+    src: url(/fonts/Baskervville-Regular.ttf);
 }
 
 @font-face {
@@ -103,8 +103,7 @@ html, body{
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 90%;
-    height: 100%;
+    width: 85%;
 }
 
 .star-svg-2{
@@ -115,9 +114,23 @@ html, body{
     padding: 7% 10%;
 }
 
+.star-svg-3{
+    display: flex;
+    justify-content: end;
+    width: 66%;
+
+}
+
+.star-svg-4{
+    display: flex;
+    justify-content: center;
+    width: 62%;
+    padding-left: 7.5%;
+}
+
 /* landing page contents */
 
-body, .catch p, .resume-button, .about p {
+body, .catch p, .resume-button, .about p{
     font-family: 'Poppins';
 }
 
@@ -378,9 +391,49 @@ body, .catch p, .resume-button, .about p {
 /* Work Section */
 .work{
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
 }
 
+.work-heading{
+    width: 50%;
+    text-align: center;
+}
+
+.work-heading p {
+    margin-top: 1.5rem;
+    color: var(--grey-color);
+}
+
+.proj-collection {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4rem;
+    padding: 1.25rem;
+}
+
+.card{
+    width: 400px;
+    border-radius: 27px;
+    background-color: #102c57db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* to remove padding after adding in projs */
+    padding: 3rem 3rem;
+    margin: 0.75rem 0.25rem;
+    transition: transform 0.2s;
+    color: var(--pink-color);
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-title{
+    font-size: 1.2rem;
+    font-family: 'Baskervville';
+    margin-bottom: 1rem;
+}
 /* RESPONSIVE DESIGN */
 @media (max-width: 1157px){
     .catch h1{
