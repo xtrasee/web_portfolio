@@ -33,42 +33,38 @@ document.addEventListener('DOMContentLoaded', function () {
         link.classList.add('active');
       }
     });
-  });
+});
 
+document.addEventListener('DOMContentLoaded', function () {
+  var contents = document.getElementById('contents');
 
-let prevScrollpos = window.pageYOffset;
+  // Function to check if the user has scrolled up
+  function checkScroll() {
+    var scrollPosition = window.scrollY;
 
-  window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-  
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementsByClassName("navbar").style.top = "0";
+    // Adjust the value (e.g., 300) based on when you want the content to appear
+    if (scrollPosition > 250) {
+      contents.style.opacity = 1;
     } else {
-      document.getElementsByClassName("navbar").style.top = "-80px"; // Adjust the value based on your navbar height
+      contents.style.opacity = 0;
     }
-  
-    prevScrollpos = currentScrollPos;
-  };
+  }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var contents = document.getElementById('contents');
+  // Attach the checkScroll function to the scroll event
+  window.addEventListener('scroll', checkScroll);
 
-    // Function to check if the user has scrolled up
-    function checkScroll() {
-      var scrollPosition = window.scrollY;
+  // Initial check to see if content should be visible on page load
+  checkScroll();
+});
 
-      // Adjust the value (e.g., 300) based on when you want the content to appear
-      if (scrollPosition > 250) {
-        contents.style.opacity = 1;
-      } else {
-        contents.style.opacity = 0;
-      }
-    }
-
-    // Attach the checkScroll function to the scroll event
-    window.addEventListener('scroll', checkScroll);
-
-    // Initial check to see if content should be visible on page load
-    checkScroll();
-  });
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    
+    document.getElementById("navbar").style.background = "#FFD8CC";
+  } else {
+   
+    document.getElementById("navbar").style.background = "none";
+  }
+}
   
