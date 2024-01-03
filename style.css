@@ -50,6 +50,12 @@ html, body{
     font-weight: 400;
 }
 
+/* dark mode */
+.dark-mode{
+    color: #fff;
+    background: linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
+}
+
 /* navbar */
 .navbar ul {
     position: fixed;
@@ -63,6 +69,7 @@ html, body{
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
     list-style-type: none;
+    padding: 1rem 2rem;
     margin-bottom: 10%;
 }
 
@@ -79,7 +86,12 @@ html, body{
 
 .active{
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.766);
+  background-color: rgba(255, 255, 255, 0.68);
+}
+
+.transparent{
+    background-color: #ffffff6b;
+    border-radius: 37px;
 }
 
 /* LANDING PAGE */
@@ -158,7 +170,7 @@ body, .catch p, .resume-button, .about p{
     text-align: center;
     padding-top: 4rem;
     color: var(--grey-color);
-    font-size: 1.5rem;
+    font-size: 1.35rem;
 }
  
  .resume-container{
