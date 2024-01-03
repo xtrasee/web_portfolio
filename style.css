@@ -143,7 +143,7 @@ body, .catch p, .resume-button, .about p{
     font-family: 'Poppins';
 }
 
-.catch h1, .work h1, .about h1{
+.catch h1, .work h1, .about h1, .contact h1{
     font-family: 'Synthemesc';
     color: var(--darkblue-color);
 }
@@ -161,7 +161,7 @@ body, .catch p, .resume-button, .about p{
     font-size: 6vw;
 }
 
-.about h1, .work h1{
+.about h1, .work h1, .contact h1{
     font-size: 6.5rem;
     text-align: center;
 }
@@ -404,7 +404,7 @@ body, .catch p, .resume-button, .about p{
     text-align: center;
 }
 
-.work-heading p {
+.work-heading p, .contact-heading p {
     margin-top: 1.5rem;
     color: var(--grey-color);
 }
@@ -444,6 +444,53 @@ body, .catch p, .resume-button, .about p{
     font-family: 'Baskervville';
     margin-bottom: 1rem;
 }
+
+/* Contact */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    height: 35rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 3rem;
+    width: 50%;
+    padding: 2rem;
+    background-color: #ffc4b28b;
+    border-radius: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.75rem;
+    color: var(--grey-color);
+}
+
+textarea{
+    height: 70%;
+}
+
+.submit-button{
+    display: flex;
+    justify-content: center;
+}
+
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1157px){
     .catch h1{
