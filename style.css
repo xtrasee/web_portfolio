@@ -474,22 +474,35 @@ input,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--grey-color);
+    background-color: #ffffffef;
+    font-family: 'Poppins';
 }
 
 textarea{
     height: 70%;
 }
-
-.submit-button{
-    display: flex;
-    justify-content: center;
+textarea:focus,
+input:focus {
+    outline: none;
+    background-color: #ffffffae;
 }
 
+/* .submit-button{
+    margin: 0 auto;
+} */
+
+form button{
+    font-size: 1.75rem;
+    font-family: 'Poppins';
+    padding: 0.5rem;
+    color: var(--grey-color);
+    background-color: #F5F5DC;
+}
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1157px){
