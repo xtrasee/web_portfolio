@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
   checkScroll();
 });
 
+// page scroll function
+
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    
-    // document.getElementById("navbar").style.background = "#FFD8CC";
+
     document.getElementById("navbar").classList.add('transparent');
   } else {
-    // document.getElementById("navbar").style.background = "none";
     document.getElementById("navbar").classList.remove('transparent');
   }
 }

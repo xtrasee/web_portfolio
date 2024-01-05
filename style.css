@@ -63,9 +63,9 @@ html, body{
     justify-content: center;
     z-index: 2;
     gap: 2rem;
-    width: 40%;
+    width: 50%;
+    margin-left: 25%;
     margin-top: 5%;
-    margin-left: 30%;
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
     list-style-type: none;
@@ -80,9 +80,9 @@ html, body{
     padding: 0.25rem 1rem;
 }
 
-.nav-link {
+/* .nav-link {
     display: inline-block;
-}
+} */
 
 .active{
   border-radius: 20px;
@@ -105,6 +105,8 @@ html, body{
 .star-container{
     position: absolute;
     width: 100%;
+    resize: both;
+    overflow: auto;
 }
 
 /* star svg positioning */
@@ -112,7 +114,8 @@ html, body{
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 85%;
+    width: 15%;
+    margin-left: 65%;
 }
 
 .star-svg-2{
@@ -382,8 +385,6 @@ body, .catch p, .resume-button, .about p{
 .fun-facts {
     margin-top: 6rem;
     padding: 2.5rem;
-    /* margin: 7rem 5rem;
-    border-radius: 20px; */
     color: #FFEEDB;
     background-color: var(--pink-color);
 
@@ -391,7 +392,7 @@ body, .catch p, .resume-button, .about p{
 
 .fun-facts h3{
     font-family: 'Synthemesc';
-    font-size: 3.75rem;
+    font-size: 3rem;
     letter-spacing: 0.25rem;
     color: var(--darkblue-color);
     text-align: center;
@@ -505,7 +506,47 @@ form button{
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 1157px){
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 545px) {
+    .catch h1{
+        font-size: 0.25rem;
+    }
+
+    .star-container{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        width: 80%;
+        margin-left: 10%;
+        font-size: .90rem;
+    }
+
+    .catch h1{
+        font-size: 4.5rem;
+    }
+
+    .star-svg{
+        margin-left: 85%;
+    }
+
+    .star-svg-2{
+        width: 30%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+/* @media (max-width: 1157px){
     .catch h1{
         width: 60vh;
         font-size: 7vw;
@@ -526,7 +567,7 @@ form button{
 }
 
 /* tablet size */
-@media (max-width:1023px) {
+/* @media (max-width:1023px) {
 
     .landingPage, .about{
         display: flex;
@@ -542,10 +583,10 @@ form button{
     .achievements{
         margin-left: 10%;
     }
-}
+} */
 
 /* smartphone */
-@media (max-width:767px) {
+/* @media (max-width:767px) {
     .catch h1{
         width: 40vh;
         font-size: 6vw;
@@ -557,4 +598,4 @@ form button{
         align-items: center;
         padding: 1rem;
     }
-}
+} */
