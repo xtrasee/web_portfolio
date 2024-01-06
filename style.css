@@ -8,6 +8,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* --root-size: 20;
+    font-size: calc(var(--root-size, 20) * 1px);
+    --responsive: calc((var(--min-font) * var(--root-size) * 1px) + (var(--max-font) - var(--min-font)) * var(--root-size) * ((100vw - 420px) / (1200 - 420))); */
 }
 
 /* page formatting */
@@ -160,12 +163,12 @@ body, .catch p, .resume-button, .about p{
 
 .catch h1{
     text-align: center;
-    width: 100vh;
     font-size: 6vw;
 }
 
 .about h1, .work h1, .contact h1{
-    font-size: 6.5rem;
+    /* font-size: 6.5rem; */
+    font-size: 7vw;
     text-align: center;
 }
 
@@ -183,7 +186,7 @@ body, .catch p, .resume-button, .about p{
  }
 
 .resume-button {
-   font-size: 26px;
+   font-size: 2vw;
    font-weight: 200;
    letter-spacing: 1px;
    padding: 13px 20px 13px;
@@ -508,24 +511,34 @@ form button{
 /* RESPONSIVE DESIGN */
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 545px) {
-    .catch h1{
-        font-size: 0.25rem;
+    /* .navbar ul {
+        gap: 0;
+        width: 100%;
     }
 
     .star-container{
         display: none;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
-    .navbar ul {
-        width: 80%;
-        margin-left: 10%;
-        font-size: .90rem;
+
+    /* .landingPage{
+        margin-top: 7.5rem;
+    }
+
+    .catch{
+        width: 100%;
     }
 
     .catch h1{
-        font-size: 4.5rem;
+        width: 50%;
+    }
+
+    .catch p{
+        width: 50%;
+        font-size: 1rem;
+        padding-top: 2.25rem;
     }
 
     .star-svg{
@@ -534,68 +547,20 @@ form button{
 
     .star-svg-2{
         width: 30%;
-    }
+    } */
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 992px) {
 
+    /* .navbar ul {
+        width: 70%;
+        margin-left: 15%;
+        font-size: .90rem;
+    } */
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
-
 }
-/* @media (max-width: 1157px){
-    .catch h1{
-        width: 60vh;
-        font-size: 7vw;
-    }
-
-    .aboutSec{
-        flex-direction: column;
-    }
-    .achievements{
-        width: 75%;
-        margin-left: 3.5%;
-        padding: 5px;
-    }
-
-    .skillSet h3{
-        padding-top: 5px;
-    }
-}
-
-/* tablet size */
-/* @media (max-width:1023px) {
-
-    .landingPage, .about{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about p{
-        margin-right: 0%;
-        margin-bottom: 5%;
-    }
-
-    .achievements{
-        margin-left: 10%;
-    }
-} */
-
-/* smartphone */
-/* @media (max-width:767px) {
-    .catch h1{
-        width: 40vh;
-        font-size: 6vw;
-    }
-
-    .about{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-} */
