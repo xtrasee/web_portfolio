@@ -26,7 +26,6 @@ html, body{
 
 .page-container{
     min-height: 100vh;
-    /* padding: 1rem 7rem 10.5rem; */
     position: relative;
 }
 
@@ -66,8 +65,8 @@ html, body{
     justify-content: center;
     z-index: 2;
     gap: 2rem;
-    width: 50%;
-    margin-left: 25%;
+    width: 40%;
+    margin-left: 30%;
     margin-top: 5%;
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
@@ -163,7 +162,7 @@ body, .catch p, .resume-button, .about p{
 
 .catch h1{
     text-align: center;
-    font-size: 6vw;
+    font-size: 7vw;
 }
 
 .about h1, .work h1, .contact h1{
@@ -176,7 +175,8 @@ body, .catch p, .resume-button, .about p{
     text-align: center;
     padding-top: 4rem;
     color: var(--grey-color);
-    font-size: 1.35rem;
+    /* font-size: 1.35rem; */
+    font-size: 2vw;
 }
  
  .resume-container{
@@ -238,13 +238,14 @@ body, .catch p, .resume-button, .about p{
     border-top-right-radius: 40%;
     border-top-left-radius: 40%;
     box-shadow:  -5px 5px 0px #FFD8CC,
-             5px -5px 0px #F5F5DC;
+             5px -5px 0px #FFD8CC;
     overflow: hidden;
 }
 
  .about h2{
-    margin-top: 2rem;
-    font-size: 2.5rem;
+    margin-top: 2vh;
+    /* font-size: 2.5rem; */
+    font-size: 3vw;
     color: var(--darkblue-color);
     /* find better font to pair with h1 font */
     font-family: 'Synthemesc';
@@ -259,9 +260,8 @@ body, .catch p, .resume-button, .about p{
 
  .about p, .about-head p {
     padding-top: 2rem;
-    font-size: 1.25rem;
+    font-size: 1.8vw;
     line-height: 2rem;
-    margin-right: 10%;
     color: var(--grey-color);
 }
 
@@ -270,21 +270,23 @@ body, .catch p, .resume-button, .about p{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0;
     margin: 7rem 5rem;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.9s;
-    border-radius: 20px;
-    background: #102c57e2;
     padding: 0.75rem;
+ }
+
+ .skills{
+    background: #102c57e2;
+    border-radius: 20px;
  }
 
  .skills h2{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--pink-color);
     font-family: 'Synthemesc';
-    font-size: 3rem;
+    font-size: 3vw;
     letter-spacing: 0.5rem;
  }
 
@@ -293,13 +295,14 @@ body, .catch p, .resume-button, .about p{
     justify-content: center;
     flex-direction: row;
     margin-bottom: 5%;
+    overflow-y: scroll;
  }
  
  .technologies h5, .skill-box{
     text-align: center;
     color: #FFEEDB;
-    font-size: 1.5rem;
-    padding: 0rem 1.5rem;
+    font-size: 2vw;
+    padding: 0rem 2.5vw;
  }
 
  .technologies i{
@@ -307,7 +310,7 @@ body, .catch p, .resume-button, .about p{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 5rem;
+    font-size: 5vw;
     padding: 1rem;
     color: #FFEEDB;
  }
@@ -319,12 +322,12 @@ body, .catch p, .resume-button, .about p{
  }
 
  .soft-skills{
-    margin-top: 7.5rem;
+    margin-top: 9vh;
  }
 
  .quality-card{
-    padding: 1.2rem;
-    font-size: 1.5rem;
+    font-size: 2vw;
+    padding: 1rem;
     color: #FFEEDB;
  }
 
@@ -337,8 +340,8 @@ body, .catch p, .resume-button, .about p{
     align-items: center;
     font-family: 'Poppins';
     padding: 1rem;
-    font-size: 1.3rem;
-    line-height: 2.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
  }
 
  .intro-bio{
@@ -510,44 +513,67 @@ form button{
 
 /* RESPONSIVE DESIGN */
 /* Small devices (tablets, 768px and up) */
-@media (max-width: 545px) {
-    /* .navbar ul {
-        gap: 0;
-        width: 100%;
-    }
-
-    .star-container{
-        display: none;
-    } */
-}
 
 @media (max-width: 768px) {
-
-    /* .landingPage{
-        margin-top: 7.5rem;
-    }
-
-    .catch{
-        width: 100%;
-    }
-
-    .catch h1{
-        width: 50%;
-    }
-
-    .catch p{
-        width: 50%;
-        font-size: 1rem;
-        padding-top: 2.25rem;
+    .navbar ul{
+        width: 70%;
+        margin-left: 15%;
+        gap: 0;
+        font-size: 2.25vw;
     }
 
     .star-svg{
-        margin-left: 85%;
+        margin-left: 75%;
     }
 
     .star-svg-2{
         width: 30%;
-    } */
+        border-radius: 1px solid black;
+    }
+
+    .catch p{
+        padding-top: 2.50vh;
+    }
+
+    .landingPage, .about, .work, .contact{
+        margin-top: 15vh;
+    }
+
+    .aboutSec{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-head h2{
+        font-size: 4vw;
+    }
+
+    .about-head p{
+        font-size: 2vw;
+        line-height: normal;
+    }
+
+    .about img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .about{
+        border: 1px solid red;
+        margin-left: 0;
+    }
+
+    .about-tools{
+        /* margin: 0; */
+    }
+
+    .skills{
+        border-radius: 0;
+        margin: 0;
+        border: 1px solid black;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */

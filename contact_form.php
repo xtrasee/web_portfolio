@@ -1,5 +1,5 @@
 <?php
-
+    echo $_POST["name"].$_POST["email"].$_POST["message"];
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
