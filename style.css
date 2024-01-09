@@ -359,9 +359,9 @@ body, .catch p, .resume-button, .about p{
 
 .fun-facts li{
     width: fit-content;
-    font-size: 1.3rem;
+    font-size: 1.5vw;
     padding: 1rem 2rem;
-    margin: 2rem;
+    margin: 3.5vw;
     border-radius: 20px;
     background-color: var(--darkblue-color);
 }
@@ -398,7 +398,7 @@ body, .catch p, .resume-button, .about p{
 
 .fun-facts h3{
     font-family: 'Synthemesc';
-    font-size: 3rem;
+    font-size: 3.75vw;
     letter-spacing: 0.25rem;
     color: var(--darkblue-color);
     text-align: center;
@@ -561,18 +561,29 @@ form button{
     }
 
     .about{
-        border: 1px solid red;
         margin-left: 0;
-    }
-
-    .about-tools{
-        /* margin: 0; */
     }
 
     .skills{
         border-radius: 0;
         margin: 0;
-        border: 1px solid black;
+        padding: 0rem 5rem;
+    }
+
+    .fun-facts ul{
+        border: 1px solid red;
+    }
+
+    .fun-facts li{
+        width: 100%;
+    }
+
+    .fun1, .fun2, .fun3, .fun4, .fun5{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        border: 10px solid pink;
     }
 }
 
