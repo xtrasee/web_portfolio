@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 40) {
 
     document.getElementById("navbar").classList.add('transparent');
   } else {
