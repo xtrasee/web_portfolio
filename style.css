@@ -61,27 +61,33 @@ html, body{
 }
 
 /* navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
 .navbar ul {
     position: fixed;
     display: flex;
     justify-content: center;
     z-index: 2;
     gap: 2rem;
-    width: 50%;
-    margin-left: 25%;
+    width: max-content;
     margin-top: 5%;
+    margin-bottom: 10%;
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
     list-style-type: none;
     padding: 1rem 2rem;
-    margin-bottom: 10%;
 }
 
 .navbar li  a{
     display: inline;
     color: black;
+    text-align: center;
     text-decoration: none;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.75rem;
 }
 
 /* .nav-link {
@@ -226,8 +232,8 @@ body, .catch p, .resume-button, .about p{
 
 .curvy-image {
     margin-top: 2rem;
-    width: 17vw;
-    height: 23vw;
+    width: 17rem;
+    height: 23rem;
     border-top-right-radius: 40%;
     border-top-left-radius: 40%;
     box-shadow:  -5px 5px 0px #FFD8CC,
@@ -236,7 +242,6 @@ body, .catch p, .resume-button, .about p{
 }
 
  .about h2{
-    margin-top: 2vh;
     font-size: 2.25rem;
     color: var(--darkblue-color);
     font-family: 'Synthemesc';
@@ -276,6 +281,7 @@ body, .catch p, .resume-button, .about p{
 
  .skills{
     background: #102c57e2;
+    padding: 1rem;
     border-radius: 10px;
     margin-top: 5rem;
  }
@@ -372,6 +378,11 @@ body, .catch p, .resume-button, .about p{
     margin: 3.5vw;
     border-radius: 20px;
     background-color: var(--darkblue-color);
+    transition: transform 0.3s ease;
+}
+
+.fun-facts li:hover{
+    transform: scale(1.1);
 }
 
 .fun1{
@@ -518,8 +529,6 @@ form button{
 @media (max-width: 768px) {
 
     .navbar ul{
-        width: 90%;
-        margin-left: 5%;
         font-size: 2.25vw;
         gap: 0;
     }
@@ -627,11 +636,6 @@ form button{
     .landingPage, .about, .work, .contact{
         margin-top: 20vh;
     }
-
-    /* .navbar ul{
-        width: 70%;
-        margin-left: 15%;
-    } */
 
     .star-svg-3{
         margin-left: 25%;
