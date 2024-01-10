@@ -8,14 +8,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* --root-size: 20;
-    font-size: calc(var(--root-size, 20) * 1px);
-    --responsive: calc((var(--min-font) * var(--root-size) * 1px) + (var(--max-font) - var(--min-font)) * var(--root-size) * ((100vw - 420px) / (1200 - 420))); */
 }
 
 /* page formatting */
 html, body{
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
     background: linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
     background-repeat: no-repeat;
 }
@@ -70,8 +67,8 @@ html, body{
     justify-content: center;
     z-index: 2;
     gap: 2rem;
-    width: 40%;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: 25%;
     margin-top: 5%;
     font-size: 1.1rem;
     font-family: 'Poppins-Light';
@@ -157,7 +154,7 @@ body, .catch p, .resume-button, .about p{
     font-family: 'Synthemesc';
     color: var(--darkblue-color);
     text-align: center;
-    font-size: 7vw;
+    font-size: 7.5vw;
 }
 
 .catch{
@@ -240,10 +237,8 @@ body, .catch p, .resume-button, .about p{
 
  .about h2{
     margin-top: 2vh;
-    /* font-size: 2.5rem; */
-    font-size: 3vw;
+    font-size: 2.25rem;
     color: var(--darkblue-color);
-    /* find better font to pair with h1 font */
     font-family: 'Synthemesc';
  }
 
@@ -256,13 +251,16 @@ body, .catch p, .resume-button, .about p{
 
  .about p{
     padding-top: 2rem;
-    font-size: 1.5vw;
-    line-height: 3rem;
+    font-size: 1.25rem;
     color: var(--grey-color);
 }
 
 .intro-bio{
-    font-size: 2vw;
+    width: 50%;
+    color: var(--grey-color);
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    line-height: 1.75rem;
 }
 
 /* MAKE FOR SMALLER SCREENS TO HAVE NO BORDER SPACE */
@@ -278,7 +276,8 @@ body, .catch p, .resume-button, .about p{
 
  .skills{
     background: #102c57e2;
-    border-radius: 20px;
+    border-radius: 10px;
+    margin-top: 5rem;
  }
 
  .skills h2{
@@ -286,7 +285,7 @@ body, .catch p, .resume-button, .about p{
     margin-bottom: 1rem;
     color: var(--pink-color);
     font-family: 'Synthemesc';
-    font-size: 3vw;
+    font-size: 2.25rem;
     letter-spacing: 0.5rem;
  }
 
@@ -352,12 +351,15 @@ body, .catch p, .resume-button, .about p{
     line-height: 1.5rem;
  }
 
- .intro-bio{
-    width: 50%;
-    color: var(--grey-color);
+/* fun facts */
+.fun-facts h3{
+    font-family: 'Synthemesc';
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    color: var(--darkblue-color);
+    text-align: center;
 }
 
-/* fun facts */
 .fun-facts ul{
     list-style-type: none;
     margin-top: 1.5vh;
@@ -365,7 +367,7 @@ body, .catch p, .resume-button, .about p{
 
 .fun-facts li{
     width: fit-content;
-    font-size: 1.5vw;
+    font-size: 1rem;
     padding: 1rem 2rem;
     margin: 3.5vw;
     border-radius: 20px;
@@ -399,14 +401,6 @@ body, .catch p, .resume-button, .about p{
     padding: 2.5rem;
     color: #FFEEDB;
     background-color: var(--pink-color);
-}
-
-.fun-facts h3{
-    font-family: 'Synthemesc';
-    font-size: 3.75vw;
-    letter-spacing: 0.25rem;
-    color: var(--darkblue-color);
-    text-align: center;
 }
 
 /* Work Section */
@@ -490,27 +484,28 @@ textarea {
     margin-bottom: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--grey-color);
     background-color: #ffffffef;
     font-family: 'Poppins';
 }
 
 textarea{
-    height: 70%;
+    height: 75%;
 }
+
 textarea:focus,
 input:focus {
     outline: none;
     background-color: #ffffffae;
 }
 
-/* .submit-button{
+.submit-button{
     margin: 0 auto;
-} */
+}
 
 form button{
-    font-size: 1.75rem;
+    font-size: 1rem;
     font-family: 'Poppins';
     padding: 0.5rem;
     color: var(--grey-color);
@@ -521,32 +516,29 @@ form button{
 /* Small devices (tablets, 768px and up) */
 
 @media (max-width: 768px) {
+
     .navbar ul{
-        width: 70%;
-        margin-left: 15%;
-        gap: 0;
+        width: 90%;
+        margin-left: 5%;
         font-size: 2.25vw;
+        gap: 0;
     }
 
-    .star-svg{
-        margin-left: 75%;
+    .navbar li{
+        padding: 0rem 0.25rem;
     }
 
-    .star-svg-2{
-        width: 30%;
+    .catch h1{
+        font-size: 7.50vw;
     }
 
     .catch p, .work p{
         padding-top: 5vw;
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .work p{
         margin: 0;
-    }
-
-    .landingPage, .about, .work, .contact{
-        margin-top: 19vh;
     }
 
     /* about section */
@@ -557,19 +549,20 @@ form button{
         text-align: center;
     }
 
-    .about h1, .work h1{
-        font-size: 8vh;
-    }
-
     .about-head h2{
-        font-size: 5vw;
         text-align: start;
+        font-size: 1.75rem;
     }
 
     .about-head p{
-        font-size: 3vw;
+        font-size: 1rem;
         line-height: normal;
         text-align: start;
+    }
+
+    .about-head{
+        width: 75%;
+        margin:0
     }
 
     .about img{
@@ -592,18 +585,18 @@ form button{
     }
 
     .intro-bio{
-        font-size: 3vw;
-        line-height: normal;
+        width: 85%;
+        font-size: 1rem;
     }
 
     .fun-facts h3{
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     .fun-facts li{
         width: 100%;
         margin: 0;
-        font-size: 2.75vw;
+        font-size: 3vw;
     }
 
     .fun1, .fun2, .fun3, .fun4, .fun5{
@@ -621,10 +614,24 @@ form button{
         width: 95%;
         margin-left: 2.5%;
     }
+
+    /* contact */
+    form{
+        width: 95%;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 992px) {
+
+    .landingPage, .about, .work, .contact{
+        margin-top: 20vh;
+    }
+
+    /* .navbar ul{
+        width: 70%;
+        margin-left: 15%;
+    } */
 
     .star-svg-3{
         margin-left: 25%;
@@ -638,4 +645,12 @@ form button{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
+
+    .star-svg{
+        margin-left: 75%;
+    }
+
+    .star-svg-2{
+        width: 30%;
+    }
 }
