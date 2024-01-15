@@ -1,7 +1,12 @@
 :root {
+    --light-bg:linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
+    --dark-bg: linear-gradient(45deg, #576CBC, #19376D, #102C57);
     --darkblue-color: #102C57;
     --grey-color:#565656;
     --pink-color: #ffc4b2;
+    --lightblue-color: #DDE6ED;
+    --lightpurple-color: #FAE7F3;
+    --purple-color: #E6B9DE;
 }
 
 * {
@@ -13,7 +18,7 @@
 /* page formatting */
 html, body{
     overflow-x: hidden;
-    background: linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
+    background: var(--light-bg);
     background-repeat: no-repeat;
 }
 
@@ -48,16 +53,54 @@ html, body{
 }
 
 @font-face {
-    font-family: 'Synthemesc';
-    src: url(/fonts/Acorn-Bold.ttf);
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Acorn';
+    src: url(/fonts/acorn-med.ttf);
 }
 
 /* dark mode */
-.dark-mode{
-    color: #fff;
-    background: linear-gradient(45deg, #F5F5DC, #FFEEDB, #FFD8CC);
+.dark-mode {
+    background: var(--dark-bg);
+}
+
+.dark-mode h1,
+.dark-mode .about h2 {
+    color: var(--purple-color);
+}
+
+.dark-mode .intro-bio,
+.dark-mode p,
+.dark-mode .navbar li a {
+    color: var(--lightpurple-color);
+}
+
+.dark-mode .resume-button,
+.dark-mode .skills h2{
+    color: var(--purple-color);
+}
+
+.dark-mode .active{
+    background-color: #24406ad6;
+}
+  
+.dark-mode .transparent{
+    background-color: #102c57e6;
+}
+
+.dark-mode .skills{
+    background-color: var(--pink-color);
+}
+
+.dark-mode .resume-button::after {
+    background-color: var(--darkblue-color);
+}
+
+.dark-mode img {
+    filter: brightness(0.8);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .zoomed {
+    transform: scale(2); /* Increase the scale value for more zoom */
 }
 
 /* navbar */
@@ -72,7 +115,7 @@ html, body{
     display: flex;
     justify-content: center;
     z-index: 2;
-    gap: 2rem;
+    gap: 1rem;
     width: max-content;
     margin-top: 5%;
     margin-bottom: 10%;
@@ -87,12 +130,8 @@ html, body{
     color: black;
     text-align: center;
     text-decoration: none;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 1.25rem;
 }
-
-/* .nav-link {
-    display: inline-block;
-} */
 
 .active{
   border-radius: 20px;
@@ -156,11 +195,11 @@ body, .catch p, .resume-button, .about p{
     font-family: 'Poppins';
 }
 
-.catch h1, .work h1, .about h1, .contact h1{
-    font-family: 'Synthemesc';
+h1{
+    font-family: 'Acorn';
     color: var(--darkblue-color);
     text-align: center;
-    font-size: 7.5vw;
+    font-size: 6.5vw;
 }
 
 .catch{
@@ -173,7 +212,7 @@ body, .catch p, .resume-button, .about p{
 .catch p{
     text-align: center;
     padding-top: 4rem;
-    color: var(--grey-color);
+    /* color: var(--grey-color); */
     /* font-size: 1.35rem; */
     font-size: 2vw;
 }
@@ -244,7 +283,8 @@ body, .catch p, .resume-button, .about p{
  .about h2{
     font-size: 2.25rem;
     color: var(--darkblue-color);
-    font-family: 'Synthemesc';
+    font-family: 'Acorn';
+    padding: 1rem 0rem;
  }
 
  .about-head{
@@ -257,7 +297,7 @@ body, .catch p, .resume-button, .about p{
  .about p{
     padding-top: 2rem;
     font-size: 1.25rem;
-    color: var(--grey-color);
+    /* color: var(--grey-color); */
 }
 
 .intro-bio{
@@ -290,7 +330,7 @@ body, .catch p, .resume-button, .about p{
     text-align: center;
     margin-bottom: 1rem;
     color: var(--pink-color);
-    font-family: 'Synthemesc';
+    font-family: 'Acorn';
     font-size: 2.25rem;
     letter-spacing: 0.5rem;
  }
@@ -359,7 +399,7 @@ body, .catch p, .resume-button, .about p{
 
 /* fun facts */
 .fun-facts h3{
-    font-family: 'Synthemesc';
+    font-family: 'Acorn';
     font-size: 3rem;
     letter-spacing: 0.25rem;
     color: var(--darkblue-color);
@@ -423,7 +463,7 @@ body, .catch p, .resume-button, .about p{
 
 .work-heading p, .contact-heading p {
     margin-top: 1.5rem;
-    color: var(--grey-color);
+    /* color: var(--grey-color); */
 }
 
 .proj-collection {
@@ -438,7 +478,8 @@ body, .catch p, .resume-button, .about p{
 .card{
     width: 400px;
     border-radius: 27px;
-    background-color: #102c57db;
+    background-color: var(--darkblue-color);
+    opacity: 0.92;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     /* to remove padding after adding in projs */
@@ -454,6 +495,7 @@ body, .catch p, .resume-button, .about p{
 
 .card:hover{
     transform: scale(1.05);
+    opacity: 1;
 }
 
 .card-title{
@@ -539,6 +581,10 @@ form button{
 
     .catch h1{
         font-size: 7.50vw;
+    }
+
+    .work h1, .about h1, .contact h1{
+        font-size: 14vw;
     }
 
     .catch p, .work p{

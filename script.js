@@ -68,4 +68,47 @@ function scrollFunction() {
     document.getElementById("navbar").classList.remove('transparent');
   }
 }
+
+// light & dark mode
+const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+// Set initial mode based on local storage
+if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+}
+
+function darkMode() {
+    const body = document.body;
+    // Toggle the 'dark-mode' class on the body
+    body.classList.toggle('dark-mode');
+
+    // Update local storage with current mode
+    const isDarkModeNow = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkModeNow ? 'enabled' : 'disabled');
+  
+    updateImageSource();
+}
+
+
+function updateImageSource() {
+  const image = document.getElementById('mainImg');
+  const isDarkMode = document.body.classList.contains('dark-mode');
+
+  // Update image source based on dark mode
+  image.src = isDarkMode ? 'img/nightPic.jpg' : 'img/gradPic.jpg';
+
+  localStorage.setItem('imageSource', image.src);
+}
+
+  // Retrieve image source from local storage
+  const storedImageSource = localStorage.getItem('imageSource');
+  if (storedImageSource) {
+      document.getElementById('mainImg').src = storedImageSource;
+  }
+
+
+  function zoomImage() {
+    const image = document.getElementById('mainImg');
+    image.classList.toggle('zoomed');
+}
   
