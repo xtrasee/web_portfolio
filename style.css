@@ -69,12 +69,12 @@ html, body{
 
 .dark-mode .intro-bio,
 .dark-mode p,
-.dark-mode .navbar li a {
+.dark-mode .navbar li a,
+.dark-mode .navbar i {
     color: var(--lightpurple-color);
 }
 
-.dark-mode .resume-button,
-.dark-mode .skills h2{
+.dark-mode .resume-button{
     color: var(--purple-color);
 }
 
@@ -87,11 +87,31 @@ html, body{
 }
 
 .dark-mode .skills{
-    background-color: var(--pink-color);
+    background-color: #e8cae2b0;
+}
+
+.dark-mode .skills h2,
+.dark-mode .skills i,
+.dark-mode .skills h5,
+.dark-mode .quality-card{
+    color: var(--darkblue-color);
+}
+
+.dark-mode .skills i:hover{
+    color: var(--lightpurple-color);
+}
+
+.dark-mode .quality-card:hover{
+    color: var(--lightpurple-color);
 }
 
 .dark-mode .resume-button::after {
     background-color: var(--darkblue-color);
+}
+
+.dark-mode .fun-facts{
+    background-color: var(--lightpurple-color);
+    color: var(--lightpurple-color);
 }
 
 .dark-mode img {
@@ -99,8 +119,8 @@ html, body{
     transition: transform 0.3s ease;
 }
 
-.dark-mode .zoomed {
-    transform: scale(2); /* Increase the scale value for more zoom */
+.zoomed {
+    transform: scale(1.3); /* Increase the scale value for more zoom */
 }
 
 /* navbar */
@@ -125,13 +145,17 @@ html, body{
     padding: 1rem 2rem;
 }
 
-.navbar li  a{
+.navbar li  a, i{
     display: inline;
     color: black;
     text-align: center;
     text-decoration: none;
     padding: 0.25rem 1.25rem;
 }
+
+/* .navbar i{
+    color: white;
+} */
 
 .active{
   border-radius: 20px;
