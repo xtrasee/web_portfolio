@@ -110,13 +110,36 @@ html, body{
 }
 
 .dark-mode .fun-facts{
-    background-color: var(--lightpurple-color);
+    /* background-color: var(--lightpurple-color); */
+    background-color: #e8cae2b0;
     color: var(--lightpurple-color);
 }
 
 .dark-mode img {
     filter: brightness(0.8);
     transition: transform 0.3s ease;
+}
+
+.dark-mode form{
+    background-color: #e8cae2b0;
+}
+
+.dark-mode form button{
+    background-color: var(--darkblue-color);
+    color: var(--lightpurple-color);
+}
+
+.dark-mode .card{
+    transform: box-shadow 0.3s ease;
+}
+
+.dark-mode .card:hover{
+    box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+}
+
+.dark-mode footer,
+.dark-mode .social-container a{
+    color: var(--lightpurple-color);
 }
 
 .zoomed {
@@ -236,8 +259,6 @@ h1{
 .catch p{
     text-align: center;
     padding-top: 4rem;
-    /* color: var(--grey-color); */
-    /* font-size: 1.35rem; */
     font-size: 2vw;
 }
  
@@ -507,9 +528,9 @@ h1{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     /* to remove padding after adding in projs */
-    padding: 3rem 3rem;
+    padding: 3rem;
     margin: 0.75rem 0.25rem;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
     color: var(--pink-color);
 }
 
@@ -518,8 +539,9 @@ h1{
 }
 
 .card:hover{
-    transform: scale(1.05);
+    transform: translateY(-10px); /* Translate the element up on hover */
     opacity: 1;
+
 }
 
 .card-title{
@@ -551,7 +573,7 @@ form{
     width: 50%;
     padding: 2rem;
     background-color: #ffc4b28b;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 input,
@@ -560,7 +582,7 @@ textarea {
     padding: 10px;
     margin-bottom: 1.5rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1rem;
     color: var(--grey-color);
     background-color: #ffffffef;
@@ -587,6 +609,47 @@ form button{
     padding: 0.5rem;
     color: var(--grey-color);
     background-color: #F5F5DC;
+    border-radius: 10px;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    color: #7f7f7f;
+    padding: 20vw 20vw 10vw 20vw;
+}
+
+.left-footer{
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-container{
+    display: flex;
+}
+
+.social-container a{
+    padding: 0.5rem 0rem;
+    text-decoration: none;
+    color: #7f7f7f;
+}
+
+.social-container a:hover{
+    color: var(--darkblue-color);
+}
+.socials p, .message p{
+    color: var(--darkblue-color);
+    font-family: 'Poppins-Semi';
+    padding-bottom: 0.5rem;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
 }
 
 /* RESPONSIVE DESIGN */
@@ -697,6 +760,21 @@ form button{
     /* contact */
     form{
         width: 95%;
+    }
+
+    .left-footer{
+        display: none;
+    }
+
+    footer{
+        padding: 0vw;
+        font-size: 0.75rem;
+        justify-content: center;
+    }
+    .social-container{
+        width: 50%;
+        padding: 1rem;
+        justify-content: space-around;
     }
 }
 
