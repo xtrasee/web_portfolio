@@ -69,12 +69,9 @@ function scrollFunction() {
   }
 }
 
-// light & dark mode
-const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-
-// Set initial mode based on local storage
-if (isDarkMode) {
-    document.body.classList.add('dark-mode');
+function toggleDarkMode() {
+  darkMode();
+  changeIcon();
 }
 
 function darkMode() {
@@ -87,6 +84,7 @@ function darkMode() {
     localStorage.setItem('darkMode', isDarkModeNow ? 'enabled' : 'disabled');
   
     updateImageSource();
+    changeIcon();
 }
 
 
@@ -100,15 +98,33 @@ function updateImageSource() {
   localStorage.setItem('imageSource', image.src);
 }
 
-  // Retrieve image source from local storage
-  const storedImageSource = localStorage.getItem('imageSource');
-  if (storedImageSource) {
-      document.getElementById('mainImg').src = storedImageSource;
-  }
-
-
-  function zoomImage() {
-    const image = document.getElementById('mainImg');
-    image.classList.toggle('zoomed');
+function zoomImage() {
+  const image = document.getElementById('mainImg');
+  image.classList.toggle('zoomed');
 }
+
+function changeIcon() {
+
+  console.log('changeIcon function called');
+  const iconContainer = document.getElementById('iconContainer');
+  const iconElement = iconContainer.querySelector('i');
+  
+  iconElement.classList.toggle('fa-sun-o');
+  iconElement.classList.toggle('fa-moon-o');
+
+}
+
+// Retrieve image source from local storage
+const storedImageSource = localStorage.getItem('imageSource');
+if (storedImageSource) {
+    document.getElementById('mainImg').src = storedImageSource;
+}
+  // light & dark mode
+const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+// Set initial mode based on local storage
+if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+}
+
   
