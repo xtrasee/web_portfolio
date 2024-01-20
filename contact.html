@@ -16,7 +16,7 @@
                 <li class="nav-item"><a href="/index.html">Home</a></li> 
                 <li class="nav-item"><a href="/about.html">About</a></li> 
                 <li class="nav-item"><a href="/work.html">Work</a></li> 
-                <li class="nav-item"><a href="/contact.html">Contact</a></li> 
+                <li class="nav-item active"><a href="/contact.html">Contact</a></li> 
                 <div class="switchMode" id="iconContainer" onclick="darkMode()">
                     <i class="fa fa-sun-o"></i>
                 </div>
@@ -34,8 +34,9 @@
                 </div>
 
                 <div class="form">
-                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                        <input type="hidden" name="access_key" value="d07b403c-217f-4ff5-aaf0-7c216cf1649c">
+                    <!-- <form action="https://api.web3forms.com/submit" method="POST" id="contactForm"> -->
+                    <form action="#"id="contactForm">
+                        <!-- <input type="hidden" name="access_key" value="d07b403c-217f-4ff5-aaf0-7c216cf1649c"> -->
                         <input type="text" id="name" name="name" placeholder="Name" required>
                 
                         <input type="email" id="email" name="email" placeholder="Email" required>
@@ -49,6 +50,7 @@
                 </div>
             </section>
         </div>
+        
     </main>
 
     <footer>
@@ -72,6 +74,9 @@
         </div>
     </footer>
 
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>
 </html>
