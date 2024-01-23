@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/1ded1ed97d.js" crossorigin="anonymous"></script>
     <title>About Tracy</title>
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
@@ -16,11 +17,13 @@
                 <li class="nav-item"><a href="/index.html">Home</a></li> 
                 <li class="nav-item active"><a href="/about.html">About</a></li> 
                 <li class="nav-item"><a href="/work.html">Work</a></li> 
-                <li class="nav-item"><a href="/contact.html">Contact</a></li> 
-                <div class="switchMode" id="iconContainer" onclick="darkMode()">
-                    <i class="fa fa-sun-o"></i>
+                <li class="nav-item"><a href="/contact.html">Contact</a></li>
+                <div class="checkbox-wrapper-5">
+                    <div class="check">
+                        <input checked="" id="check-5" type="checkbox" role="switch">
+                      <label for="check-5"  onclick="darkMode()"></label>
+                    </div>
                 </div>
-                    <!-- light and dark mode (moon-o)-->
             </ul>
         </nav>
     </header>
@@ -31,7 +34,7 @@
                 <h1>I'm Tracy.</h1>
                 <div class="aboutSec">
                     <div class="profilePic">
-                        <img id="mainImg" src="img/gradPic.jpg" alt="Tracy's Profile Picture" class="curvy-image" onclick="zoomImage()"">
+                        <img id="mainImg" src="img/gradPic.jpg" alt="Tracy's Profile Picture" class="curvy-image" onclick="zoomImage()">
                     </div>
                     <div class="about-head">
                         <h2>Recent college graduate from UC San Diego.</h2> 
@@ -39,13 +42,8 @@
                     </div>   
                 </div>
 
-                <!-- <div class="scroll">
-                    <h3>keep scrolling</h3>
-                    <div class="vertical-line"></div>
-                </div> -->
-
                 <div class="about-tools" id="contents">
-                    <div class="skills">
+                    <div class="skills" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1500" data-aos-anchor=".aboutSec">
                         <h2>My Current Tech Kit:</h2>
                         <div class="technologies">
                             <div class="tech-card">
@@ -96,27 +94,37 @@
                 </div>  
 
                 <div class="short-intro">
-                    <div class="intro-bio">
+                    <div class="intro-bio" data-aos="fade-up" data-aos-duration="1500">
                         My journey into the world of coding has been an exhilarating ride. During my academic career, I took on various leadership positions, cultivating my deep appreciation for effective communication and teamwork. Initially, I focused on studying effective team dynamics; however, during the pandemic, I realized the profound impact technology has on our daily lives.<br></br> This realization led me to pursue a minor in Computer Science, where I discovered the incredible possibilities of programming. As I began tinkering with new technologies, Web Development completely captured my interest and I found myself always eager to learn more. With my dual passions for effective communication and coding, I am confident in my ability to contribute as a valuable developer in any team.
                     </div>
                 </div>
-                <!-- include slide transition in -->
+
                 <div class="fun-facts">
                     <h3>When I'm not at the computer, I ...</h3>
                     <ul>
-                        <div class="fun1">
+                        <div class="fun1" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                             <li>Enjoy playing badminton mediocrely.</li>
                         </div>
-                        <div class="fun2">
+                        <div class="fun2" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                             <li>Seek out new restaurants to critique.</li>
                         </div>
-                        <div class="fun3">
+                        <div class="fun3" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" ata-aos-anchor=".fun2">
                             <li>Watch horrible yet fascinating reality shows.</li>
                         </div>
-                        <div class="fun4">
+                        <div class="fun4" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" ata-aos-anchor=".fun3">
                             <li>Get frustrated learning new songs on the piano.</li>
                         </div>
-                        <div class="fun5">
+                        <div class="fun5" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" ata-aos-anchor=".fun4">
                             <li>Calm my frustrations  from playing the piano by painting.</li>
                         </div>
                     </ul>
@@ -144,6 +152,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- animations by Michał Sajnóg-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
