@@ -205,7 +205,7 @@ html, body{
 .star-container{
     position: absolute;
     width: 100%;
-    resize: both;
+    resize: none;
     overflow:hidden
 }
 
@@ -230,7 +230,6 @@ html, body{
     display: flex;
     justify-content: end;
     width: 66%;
-
 }
 
 .star-svg-4{
