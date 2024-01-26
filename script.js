@@ -47,12 +47,6 @@ function sendEmail() {
   );
 }
 
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   sendEmail();
-//   form.reset();
-// });
-
 const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-mode'
 const iconTheme = 'fa-moon-o'
@@ -74,20 +68,14 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
 })
-// function darkMode() {
-//   const body = document.body;
-//   // Toggle the 'dark-mode' class on the body
-//   body.classList.toggle('dark-mode');
-
-//   // Update local storage with current mode
-//   const newMode = document.body.classList.contains('dark-mode');
-//   localStorage.setItem('dark-mode', newMode);
-
-//   document.getElementById('check-5').checked = newMode;
-
-// }
 
 function zoomImage() {
   const image = document.getElementById('mainImg');
   image.classList.toggle('zoomed');
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+  form.reset();
+});

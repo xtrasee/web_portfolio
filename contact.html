@@ -17,11 +17,8 @@
                 <li class="nav-item"><a href="/about.html">About</a></li> 
                 <li class="nav-item"><a href="/work.html">Work</a></li> 
                 <li class="nav-item active"><a href="/contact.html">Contact</a></li> 
-                <div class="checkbox-wrapper-5">
-                    <div class="check">
-                        <input checked="" id="check-5" type="checkbox" onchange="darkMode()">
-                        <label for="check-5"></label>
-                    </div>
+                <div class="switchMode">
+                    <i class="fa fa-sun-o" id="theme-button"></i>
                 </div>
             </ul>
         </nav>
@@ -35,13 +32,15 @@
                     <p>Get in touch or email me directly at thn018@ucsd.edu</p>
                 </div>
 
-                <div class="form">
+                <div class="form input-wrapper">
                     <form action="#"id="contactForm">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <div class="form-row">
+                            <input type="text" id="name" name="name" placeholder="Name" class="input" required>
                 
-                        <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="email" id="email" name="email" placeholder="Email" class="input" required>
+                        </div>
                 
-                        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Message" class="input" required></textarea>
                         
                         <div class="submit-button">
                             <button type="submit">Send Message</button>
