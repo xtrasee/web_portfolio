@@ -147,6 +147,10 @@ html, body{
     color: var(--lightpurple-color);
 }
 
+.dark-mode footer img{
+    content: url('img/pompompurin_sleep.png');
+}
+
 .dark-mode .social-container p{
     color: var(--purple-color);
 }
