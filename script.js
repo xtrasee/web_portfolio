@@ -22,6 +22,7 @@ window.addEventListener('scroll', function () {
   else { document.getElementById("navbar").classList.remove('transparent'); }
 
 });
+
 // contact email function
 function sendEmail() {
   const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value} <br> Message: ${message.value}`;
@@ -47,6 +48,7 @@ function sendEmail() {
   );
 }
 
+// icon change
 const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-mode'
 const iconTheme = 'fa-moon-o'
