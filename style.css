@@ -830,6 +830,14 @@ footer{
         font-size: 8vw;
     }
 
+    .dark-mode .menu-wrap .hamburger > div{
+        color: var(--lightpurple-color);
+    }
+
+    .dark-mode .menu-wrap .menu > div {
+        background: var(--dark-bg);
+    }
+
 }
 
 @media (max-width: 768px) {
