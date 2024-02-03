@@ -679,13 +679,13 @@ footer{
 }
 
 /* RESPONSIVE DESIGN */
-@media (min-width: 351px){
+@media (min-width: 451px){
     .menu-wrap .toggler{
         display: none;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
 
     .menu-wrap {
         position: fixed;
