@@ -687,6 +687,10 @@ footer{
 
 @media (max-width: 450px) {
 
+    .technologies i{
+        font-size: 4vw;
+    }
+
     .menu-wrap {
         position: fixed;
         top: 0;
@@ -875,6 +879,7 @@ footer{
         font-size: 1rem;
         line-height: normal;
         text-align: start;
+        margin: 0;
     }
 
     .about-head{
