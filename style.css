@@ -691,6 +691,10 @@ footer{
         font-size: 4vw;
     }
 
+    .navbar i{
+        font-size: 2rem;
+    }
+
     .menu-wrap {
         position: fixed;
         top: 0;
