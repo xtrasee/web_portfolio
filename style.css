@@ -538,7 +538,8 @@ h1{
     display: flex;
     flex-wrap:wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    justify-content: space-between;
     margin-top: 4rem;
     padding: 1.25rem;
 }
@@ -693,6 +694,7 @@ footer{
 
     .navbar i{
         font-size: 2rem;
+        color: var(--grey-color);
     }
 
     .menu-wrap {
@@ -977,6 +979,10 @@ footer{
 
     .star-svg-4{
         width: 30%
+    }
+
+    .proj-collection{
+        justify-content: center;
     }
 
 }
