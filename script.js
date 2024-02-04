@@ -40,7 +40,7 @@ function sendEmail() {
       if (message == "OK") {
         Swal.fire({
           title: "Success!",
-          text: "Message sent succeessfully",
+          text: "If you could see my face right now. You would see gratitude.",
           icon: "success"
         });
       }

@@ -168,6 +168,7 @@ html, body{
     margin: auto;
     overflow-x: auto;
 }
+
 .navbar ul {
     position: fixed;
     display: flex;
@@ -539,13 +540,14 @@ h1{
     flex-wrap:wrap;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
     margin-top: 4rem;
     padding: 1.25rem;
+    max-width: 80%;
+    margin-left:10%
 }
 
 .card{
-    width: 400px;
+    width: 500px;
     border-radius: 27px;
     background-color: var(--darkblue-color);
     opacity: 0.92;
@@ -553,7 +555,7 @@ h1{
     cursor: pointer;
     /* to remove padding after adding in projs */
     padding: 3rem;
-    margin: 0.75rem 0.25rem;
+    margin: 0.75rem 1rem;
     transition: transform 0.3s ease;
     color: var(--pink-color);
 }
@@ -981,10 +983,6 @@ footer{
         width: 30%
     }
 
-    .proj-collection{
-        justify-content: center;
-    }
-
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -999,13 +997,5 @@ footer{
 
     .star-svg-4{
        display: none;
-    }
-}
-
-@media (min-width: 1650px){
-
-    .proj-collection{
-        max-width: 60%;
-        margin-left:20%
     }
 }
