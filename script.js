@@ -7,13 +7,9 @@ let scrollpos = window.scrollY
 const header = document.querySelector("nav")
 const header_height = header.offsetHeight
 // light & dark mode
-const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+const switchInput = document.querySelector('.ui-switch input');
 
-// Set initial mode based on local storage
-if (isDarkMode) {
-  document.body.classList.add('dark-mode');
-  themeButton.inputMode('checked');
-}
+
 // navbar scroll function
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;
@@ -48,28 +44,24 @@ function sendEmail() {
   );
 }
 
-// icon change
-const themeButton = document.getElementById('theme-button');
-const darkTheme = 'dark-mode'
-const iconTheme = 'fa-moon-o'
-
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
-
-const getCurrentTheme = () => document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon-o' : 'fa-sun-o';
-
-if (selectedTheme) {
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-  themeButton.classList[selectedIcon === 'fa-moon-o' ? 'add' : 'remove'](iconTheme);
+// Function to toggle dark mode
+function toggleDarkMode(isDarkMode) {
+  document.body.classList.toggle('dark-mode', isDarkMode);
+  localStorage.setItem('dark-mode', isDarkMode);
 }
 
-themeButton.addEventListener('click', () => {
-  document.body.classList.toggle(darkTheme)
-  themeButton.classList.toggle(iconTheme)
-  localStorage.setItem('selected-theme', getCurrentTheme())
-  localStorage.setItem('selected-icon', getCurrentIcon())
-})
+// Add event listener to the switch input
+switchInput.addEventListener('change', function() {
+  const isDarkMode = this.checked;
+  toggleDarkMode(isDarkMode);
+  // Update local storage with the checked state
+  localStorage.setItem('switch-checked', isDarkMode);
+});
+
+// Check local storage for switch checked state on page load
+const switchChecked = localStorage.getItem('switch-checked') === 'true';
+switchInput.checked = switchChecked;
+toggleDarkMode(switchChecked);
 
 function zoomImage() {
   const image = document.getElementById('mainImg');

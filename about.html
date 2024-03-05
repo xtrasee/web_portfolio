@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://kit.fontawesome.com/1ded1ed97d.js" crossorigin="anonymous"></script>
     <title>About Tracy</title>
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 </head>
+
+<!-- google maps api key: AIzaSyBXfemmUlVDgbTCDd__5k5FVsvKukZbPCg -->
+
 <body>
     <header>
         <div class="menu-wrap">
@@ -24,9 +27,13 @@
                                 <li class="nav-item active"><a href="/about.html">About</a></li> 
                                 <li class="nav-item"><a href="/work.html">Work</a></li> 
                                 <li class="nav-item"><a href="/contact.html">Contact</a></li>
-                                <div class="switchMode">
-                                    <i class="fa fa-sun-o" id="theme-button"></i>
-                                </div>
+
+                                <label class="ui-switch">
+                                    <input type="checkbox" id="theme-button">
+                                    <div class="slider">
+                                      <div class="circle"></div>
+                                    </div>
+                                </label>
                             </ul>
                         </nav>
                     </div>
@@ -133,7 +140,11 @@
                 </div>
             </section>
         </div>
+
     </main>
+
+    <div id="map"></div>
+    
     <footer>
         <div class="left-footer">
             <img src="img/pom.png" alt="" height="100">
@@ -160,6 +171,7 @@
     <script>
       AOS.init();
     </script>
+
     <script src="script.js"></script>
 </body>
 </html>
