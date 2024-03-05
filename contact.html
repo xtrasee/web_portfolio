@@ -10,83 +10,88 @@
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div>
-            <div class="menu">
-                <div>
+
+    <div class="wrapper">
+        <header>
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
                     <div>
-                        <nav class="navbar">    
-                            <ul class="navbar-nav" id="navbar">
-                                <li class="nav-item"><a href="/index.html">Home</a></li> 
-                                <li class="nav-item"><a href="/about.html">About</a></li> 
-                                <li class="nav-item"><a href="/work.html">Work</a></li> 
-                                <li class="nav-item active"><a href="/contact.html">Contact</a></li>
-                                <div class="switchMode">
-                                    <i class="fa fa-sun-o" id="theme-button"></i>
-                                </div>
-                            </ul>
-                        </nav>
+                        <div>
+                            <nav class="navbar">    
+                                <ul class="navbar-nav" id="navbar">
+                                    <li class="nav-item"><a href="/index.html">Home</a></li> 
+                                    <li class="nav-item"><a href="/about.html">About</a></li> 
+                                    <li class="nav-item"><a href="/work.html">Work</a></li> 
+                                    <li class="nav-item active"><a href="/contact.html">Contact</a></li>
+                                    <label class="ui-switch">
+                                        <input type="checkbox" id="theme-button">
+                                        <div class="slider">
+                                          <div class="circle"></div>
+                                        </div>
+                                    </label>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="page-container">
-            <section class="contact">
-                <div class="contact-heading">
-                    <h1>Contact.</h1>
-                    <p>Get in touch or email me directly at thn018@ucsd.edu</p>
-                </div>
-
-                <div class="form input-wrapper">
-                    <form action="#"id="contactForm">
-                        <div class="form-row">
-                            <input type="text" id="name" name="name" placeholder="Name" class="input" required>
-                
-                            <input type="email" id="email" name="email" placeholder="Email" class="input" required>
-                        </div>
-                
-                        <textarea id="message" name="message" rows="4" placeholder="Message" class="input" required></textarea>
-                        
-                        <div class="submit-button">
-                            <button type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </div>
-        
-    </main>
-
-    <footer>
-        <div class="left-footer">
-            <img src="/img/pom.png" alt="" height="100">
-            <p class="copyright">&copy 2024 Tracy Nguyen.</p>
-        </div>
-        <div class="social-container">
-            <div class="socials">
-                <p>Elsewhere</p>
-                <a href="https://github.com/xtrasee">Github</a>
-                <a href="https://www.linkedin.com/in/tracyhnguy/">LinkedIn</a>
-                <a href="https://www.instagram.com/xtrasee/">Instagram</a>
-                <a href="https://discord.gg/Z37FgdjB">Discord</a>
-                <a href="https://www.facebook.com/nguywen.tracy/">Facebook</a>
+        </header>
+    
+        <main>
+            <div class="page-container">
+                <section class="contact">
+                    <div class="contact-heading">
+                        <h1>Contact.</h1>
+                        <p>Get in touch or email me directly at thn018@ucsd.edu</p>
+                    </div>
+    
+                    <div class="form input-wrapper">
+                        <form action="#"id="contactForm">
+                            <div class="form-row">
+                                <input type="text" id="name" name="name" placeholder="Name" class="input" required>
+                    
+                                <input type="email" id="email" name="email" placeholder="Email" class="input" required>
+                            </div>
+                    
+                            <textarea id="message" name="message" rows="4" placeholder="Message" class="input" required></textarea>
+                            
+                            <div class="submit-button">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </div>
-            <div class="message">
-                <p>Contact</p>
-                <a href="mailto:thn018@ucsd.edu?subject=Inquiry">Message</a>
+            
+        </main>
+    
+        <footer>
+            <div class="left-footer">
+                <img src="/img/pom.png" alt="" height="100">
+                <p class="copyright">&copy 2024 Tracy Nguyen.</p>
             </div>
-        </div>
-    </footer>
+            <div class="social-container">
+                <div class="socials">
+                    <p>Elsewhere</p>
+                    <a href="https://github.com/xtrasee">Github</a>
+                    <a href="https://www.linkedin.com/in/tracyhnguy/">LinkedIn</a>
+                    <a href="https://www.instagram.com/xtrasee/">Instagram</a>
+                    <a href="https://discord.gg/Z37FgdjB">Discord</a>
+                    <a href="https://www.facebook.com/nguywen.tracy/">Facebook</a>
+                </div>
+                <div class="message">
+                    <p>Contact</p>
+                    <a href="mailto:thn018@ucsd.edu?subject=Inquiry">Message</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaWTYYPRSoiYV_LHHJRCKE2ZOMS4uFIdg&callback=initMap" async defer></script>
     <script src="script.js"></script>
 </body>
 </html>

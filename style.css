@@ -22,10 +22,6 @@ html, body{
     background-repeat: no-repeat;
 }
 
-.last-element {
-    margin-bottom: 0;
-}
-
 .page-container{
     min-height: 100vh;
     position: relative;
@@ -156,7 +152,7 @@ html, body{
 }
 
 .zoomed {
-    transform: scale(1.3); /* Increase the scale value for more zoom */
+    transform: scale(1.3);
 }
 
 /* navbar */
@@ -209,6 +205,7 @@ Copyright - 2024 Galahhad (Galahad)   */
     --circle-diameter: 28px;
     --circle-bg: rgb(0, 56, 146);
     --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+    margin-top: 0.15rem;
     display: flex;
     justify-content: center;
   }
@@ -235,7 +232,7 @@ Copyright - 2024 Galahhad (Galahad)   */
     width: var(--circle-diameter);
     height: var(--circle-diameter);
     position: absolute;
-    background: var(--circle-bg);
+    background: var(--pink-color);
     border-radius: inherit;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
     background-repeat: no-repeat;
@@ -274,6 +271,7 @@ Copyright - 2024 Galahhad (Galahad)   */
   .ui-switch input:checked+.slider .circle {
     left: calc(100% - var(--circle-diameter));
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+    background-color: var(--circle-bg);
   }
   
   .ui-switch input:active+.slider .circle::before {
@@ -287,7 +285,7 @@ Copyright - 2024 Galahhad (Galahad)   */
 
 .active{
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.317);
+  background-color: rgba(255, 255, 255, 0.431);
   padding: 0.1rem;
 }
 
@@ -793,11 +791,6 @@ footer{
         font-size: 4vw;
     }
 
-    .navbar i{
-        font-size: 2rem;
-        color: var(--grey-color);
-    }
-
     .menu-wrap {
         position: fixed;
         top: 0;
@@ -1096,5 +1089,12 @@ footer{
 
     .star-svg-4{
        display: none;
+    }
+}
+
+@media (min-width: 1201px){
+    .wrapper{
+        width: 75%;
+        margin-left: 12.5%;
     }
 }

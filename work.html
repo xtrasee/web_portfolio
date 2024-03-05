@@ -11,111 +11,116 @@
 </head>
 <body>
 
-    <header>
-        <div class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div>
-            <div class="menu">
-                <div>
+    <div class="wrapper">
+        <header>
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
                     <div>
-                        <nav class="navbar">    
-                            <ul class="navbar-nav" id="navbar">
-                                <li class="nav-item"><a href="/index.html">Home</a></li> 
-                                <li class="nav-item"><a href="/about.html">About</a></li> 
-                                <li class="nav-item active"><a href="/work.html">Work</a></li> 
-                                <li class="nav-item"><a href="/contact.html">Contact</a></li>
-                                <div class="switchMode">
-                                    <i class="fa fa-sun-o" id="theme-button"></i>
-                                </div>
-                            </ul>
-                        </nav>
+                        <div>
+                            <nav class="navbar">    
+                                <ul class="navbar-nav" id="navbar">
+                                    <li class="nav-item"><a href="/index.html">Home</a></li> 
+                                    <li class="nav-item"><a href="/about.html">About</a></li> 
+                                    <li class="nav-item active"><a href="/work.html">Work</a></li> 
+                                    <li class="nav-item"><a href="/contact.html">Contact</a></li>
+                                    <label class="ui-switch">
+                                        <input type="checkbox" id="theme-button">
+                                        <div class="slider">
+                                          <div class="circle"></div>
+                                        </div>
+                                    </label>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+        
+        <div class="page-container">
+            <main>
+                <section class="work"> 
+                    <div class="work-heading">
+                        <h1>Work.</h1>
+                        <p>A collection of sites I've developed -- each engineered to be helpful, fun, and, frankly, resulted from the pursuit of my own curiosity.</p>
+                    </div>
     
-    <div class="page-container">
-        <main>
-            <section class="work"> 
-                <div class="work-heading">
-                    <h1>Work.</h1>
-                    <p>A collection of sites I've developed -- each engineered to be helpful, fun, and, frankly, resulted from the pursuit of my own curiosity.</p>
+                    <div class="star-container">
+                        <div class="star-svg-3 floating">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="69" viewBox="0 0 111 110" fill="none">
+                                <path d="M55.4188 0L58.5347 18.917C61.3216 35.8363 74.5825 49.0972 91.5018 51.8841L110.419 55L91.5018 58.1159C74.5825 60.9028 61.3216 74.1637 58.5347 91.0831L55.4188 110L52.3028 91.0831C49.516 74.1637 36.255 60.9028 19.3357 58.1159L0.418762 55L19.3357 51.8841C36.2551 49.0972 49.516 35.8363 52.3028 18.9169L55.4188 0Z" fill="white"/>
+                              </svg>
+                        </div>
+    
+                        <div class="star-svg-4 floating">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="87" viewBox="0 0 151 148" fill="none">
+                                <path d="M75.9817 0L77.25 34.2209C78.0259 55.1571 94.8249 71.9475 115.762 72.7127L150.982 74L115.762 75.2873C94.8249 76.0525 78.0259 92.8429 77.25 113.779L75.9817 148L74.7134 113.779C73.9375 92.8429 57.1385 76.0525 36.2019 75.2873L0.981689 74L36.2018 72.7127C57.1384 71.9475 73.9375 55.1571 74.7134 34.2209L75.9817 0Z" fill="white"/>
+                              </svg>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- 
+                    1. to include tools used in bubbles under the description 
+                    2. to inclde favicon in the cards.-->
+                <div class="proj-collection">
+                    <a href="https://randomideas-api-1mcg.onrender.com" target="_blank" class="clickable-card">
+                        <div class="card">
+                            <div class="card-title">
+                                Randomideas Api
+                            </div>
+                            <p class="card-description">
+                                Stores and displays your collection of random ideas with username and tag implementation. Deployed via Render.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://friendly-salamander-16d5c2.netlify.app" target="_blank" class="clickable-card">
+                        <div class="card">
+                            <div class="card-title">
+                                Tracalorie App
+                            </div>
+                            <p class="card-description">
+                                Calculates calories consumed, calories burned, calories remaining, and overall gain/loss. Deployed with Netlify.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://nomnotes.vercel.app/" target="_blank" class="clickable-card">
+                        <div class="card">
+                            <div class="card-title">
+                                Grocery List
+                            </div>
+                            <p class="card-description">
+                                Add, delete, edit, and clear your shopping list items. Utilizes local storage and deployed using Vercel.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="star-container">
-                    <div class="star-svg-3 floating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="69" viewBox="0 0 111 110" fill="none">
-                            <path d="M55.4188 0L58.5347 18.917C61.3216 35.8363 74.5825 49.0972 91.5018 51.8841L110.419 55L91.5018 58.1159C74.5825 60.9028 61.3216 74.1637 58.5347 91.0831L55.4188 110L52.3028 91.0831C49.516 74.1637 36.255 60.9028 19.3357 58.1159L0.418762 55L19.3357 51.8841C36.2551 49.0972 49.516 35.8363 52.3028 18.9169L55.4188 0Z" fill="white"/>
-                          </svg>
-                    </div>
-
-                    <div class="star-svg-4 floating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="87" viewBox="0 0 151 148" fill="none">
-                            <path d="M75.9817 0L77.25 34.2209C78.0259 55.1571 94.8249 71.9475 115.762 72.7127L150.982 74L115.762 75.2873C94.8249 76.0525 78.0259 92.8429 77.25 113.779L75.9817 148L74.7134 113.779C73.9375 92.8429 57.1385 76.0525 36.2019 75.2873L0.981689 74L36.2018 72.7127C57.1384 71.9475 73.9375 55.1571 74.7134 34.2209L75.9817 0Z" fill="white"/>
-                          </svg>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 
-                1. to include tools used in bubbles under the description 
-                2. to inclde favicon in the cards.-->
-            <div class="proj-collection">
-                <a href="https://randomideas-api-1mcg.onrender.com" target="_blank" class="clickable-card">
-                    <div class="card">
-                        <div class="card-title">
-                            Randomideas Api
-                        </div>
-                        <p class="card-description">
-                            Stores and displays your collection of random ideas with username and tag implementation. Deployed via Render.
-                        </p>
-                    </div>
-                </a>
-                <a href="https://friendly-salamander-16d5c2.netlify.app" target="_blank" class="clickable-card">
-                    <div class="card">
-                        <div class="card-title">
-                            Tracalorie App
-                        </div>
-                        <p class="card-description">
-                            Calculates calories consumed, calories burned, calories remaining, and overall gain/loss. Deployed with Netlify.
-                        </p>
-                    </div>
-                </a>
-                <a href="https://nomnotes.vercel.app/" target="_blank" class="clickable-card">
-                    <div class="card">
-                        <div class="card-title">
-                            Grocery List
-                        </div>
-                        <p class="card-description">
-                            Add, delete, edit, and clear your shopping list items. Utilizes local storage and deployed using Vercel.
-                        </p>
-                    </div>
-                </a>
+            </main>
+        </div>
+    
+        <footer>
+            <div class="left-footer">
+                <img src="/img/pom.png" alt="" height="100">
+                <p class="copyright">&copy 2024 Tracy Nguyen.</p>
             </div>
-        </main>
+            <div class="social-container">
+                <div class="socials">
+                    <p>Elsewhere</p>
+                    <a href="https://github.com/xtrasee">Github</a>
+                    <a href="https://www.linkedin.com/in/tracyhnguy/">LinkedIn</a>
+                    <a href="https://www.instagram.com/xtrasee/">Instagram</a>
+                    <a href="https://discord.gg/Z37FgdjB">Discord</a>
+                    <a href="https://www.facebook.com/nguywen.tracy/">Facebook</a>
+                </div>
+                <div class="message">
+                    <p>Contact</p>
+                    <a href="mailto:thn018@ucsd.edu?subject=Inquiry">Message</a>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <footer>
-        <div class="left-footer">
-            <img src="/img/pom.png" alt="" height="100">
-            <p class="copyright">&copy 2024 Tracy Nguyen.</p>
-        </div>
-        <div class="social-container">
-            <div class="socials">
-                <p>Elsewhere</p>
-                <a href="https://github.com/xtrasee">Github</a>
-                <a href="https://www.linkedin.com/in/tracyhnguy/">LinkedIn</a>
-                <a href="https://www.instagram.com/xtrasee/">Instagram</a>
-                <a href="https://discord.gg/Z37FgdjB">Discord</a>
-                <a href="https://www.facebook.com/nguywen.tracy/">Facebook</a>
-            </div>
-            <div class="message">
-                <p>Contact</p>
-                <a href="mailto:thn018@ucsd.edu?subject=Inquiry">Message</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
