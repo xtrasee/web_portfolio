@@ -1064,7 +1064,7 @@ html, body{
 @media (min-width: 1386px) {
 
     .proj-collection{
-        max-width: 65%;
+        max-width: 75%;
         margin: auto;
         justify-content: space-between;
         margin-top: 2%;
@@ -1079,8 +1079,12 @@ html, body{
     }
 
     .catch h1{
-        font-size: 6rem;
+        font-size: 5rem;
         width: 75%;
+    }
+
+    .resume-button{
+        font-size: 1.5rem;
     }
 
     .work-heading p, .contact-heading p, .catch p, .aboutHead p {
@@ -1121,7 +1125,6 @@ html, body{
      }
 
      .fun-facts{
-        border: 1px solid black;
         border-radius: 10px;
         width: 75%;
         margin: auto;
