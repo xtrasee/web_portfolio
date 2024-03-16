@@ -9,7 +9,6 @@ const header_height = header.offsetHeight
 // light & dark mode
 const switchInput = document.querySelector('.ui-switch input');
 
-
 // navbar scroll function
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;

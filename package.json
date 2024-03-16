@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "gsap": "^3.12.5",
-    "jquery": "^3.7.1"
-  }
-}
