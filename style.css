@@ -625,7 +625,7 @@ html, body{
     
      .skills{
         background: #102c57e2;
-        padding: 1rem;
+        padding: 1rem 2rem;
         margin-top: 3rem;
      }
     
@@ -872,19 +872,24 @@ html, body{
     }
     
     /* footer */
-    footer{
+    footer,
+    .dark-mode footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: start;
         color: #7f7f7f;
-        padding: 20vw 20vw 10vw 0vw;
+        padding: 20vw 20vw 10vw 10vw;
         font-size: 0.75rem;
+    }
+
+    .dark-mode footer img{
+        width: 7.5rem;
     }
     
     .left-footer{
-        padding: 2rem 2rem 2rem 2rem;
         text-align: center;
+        padding-right: 1rem;
     }
     
     .social-container{
@@ -931,10 +936,6 @@ html, body{
 
     .star-svg-4{
         width: 20%
-    }
-
-    footer{
-        padding: 20vw 20vw 10vw 10vw;
     }
 } 
 
