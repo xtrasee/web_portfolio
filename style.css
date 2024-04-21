@@ -329,6 +329,23 @@ html, body{
 
 }
 
+@media (max-width: 600px) {
+    .proj-collection{
+        justify-content: center;
+    }
+
+    .card{
+        flex-direction: column;
+        width: 75%;
+        margin-left: 12.5%;
+        text-align: center;
+    }
+
+    .card-imgs{
+        margin-left: 25%;
+    }
+}
+
 @media all and (min-width: 0px) {
     .navbar ul {
         margin-bottom: 1rem;
@@ -770,13 +787,13 @@ html, body{
     .proj-collection {
         padding: 1.25rem;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr)); 
         grid-gap: 20px;
         width: auto;
     }
     
     .card{
-        height: 350px;
+        height: 375px;
         border-radius: 24px;
         background-color: var(--darkblue-color);
         opacity: 0.92;
@@ -786,7 +803,6 @@ html, body{
         transition: transform 0.3s ease;
         color: var(--pink-color);
         display: flex;
-        flex-direction: column;
     }
 
     .card-content{
@@ -815,6 +831,8 @@ html, body{
 
     .card-imgs{
         max-width: 50%;
+        margin-top: 5%;
+        /* margin-left: 25%; */
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -827,10 +845,12 @@ html, body{
         max-width: 100%;
         height: auto;
         width: auto;
+        align-items: center;
     }
 
     .card-description, .tech-stack{
         font-size: 0.85rem;
+        margin-top: 2.5%;
     }
 
     .tech-stack{
@@ -965,6 +985,7 @@ html, body{
     .star-svg-4{
         width: 20%
     }
+
 } 
 
  @media (min-width: 768px){
